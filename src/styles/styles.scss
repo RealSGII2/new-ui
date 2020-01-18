@@ -72,6 +72,8 @@
 }
 
 @mixin themable($name, $package) {
+     $button-border-radius: theme($package, 'layout', 'borders', 'radius', 'base');
+
      .new-ui {
        outline: none;
      }
@@ -82,7 +84,7 @@
 
      .new-ui.new-button {
        transition: theme($package, 'elements', 'button', 'transition-time');
-       border-radius: theme($package, 'layout', 'borders', 'radius', 'base');
+       border-radius: $button-border-radius;
        padding: theme($package, 'layout', 'padding', 'button');
        border-width: theme($package, 'layout', 'borders', 'thickness', 'base');
        border-style: solid;
@@ -129,6 +131,21 @@
 
        &--info {
          @include button-color(theme($package, 'colors', 'states', 'info'));
+       }
+     }
+
+     .new-ui.new-button-toolbar {
+       .new-ui.new-button {
+         margin: 0px;
+         display: inline-block;
+
+         &:first-child {
+           border-radius: $button-border-radius 0 0 $button-border-radius !important;
+         }
+
+         &:last-child {
+           border-radius: 0 $button-border-radius $button-border-radius 0 !important;
+         }
        }
      }
 }

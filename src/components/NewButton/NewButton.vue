@@ -1,5 +1,5 @@
 <template>
-  <button v-bind:class="`new-ui new-button new-button--${state}--${appearance} ${expanded==true ? 'new-button--expanded' : ''}`+' new-button--'+shape">
+  <button v-bind:class="`new-ui new-button new-button--${state}--${appearance} ${expanded}`+' new-button--'+shape">
     <slot></slot>
   </button>
 </template>
@@ -35,6 +35,10 @@
       }
     },
     computed: {
+      expanded: function () {
+        if (this.expanded == true) {return 'new-button--expanded'}
+        return ''
+      },
       class: function () {
         let returned = `new-ui new-button new-button--${this.state}--${this.appearance}`
         if (this.expanded == true) {

@@ -1,7 +1,7 @@
 $theme-package: (
   elements: (
     button: (
-      transition-time: 0.3s
+      transition-time: 0.1s
     )
   ),
   colors: (
@@ -61,12 +61,12 @@ $theme-package: (
     elevation: (
       color: #000000,
       base: (
-        blur: 3px,
-        distance: 5px
+        blur: 8px,
+        distance: 3px
       ),
       elevated: (
-        blur: 6px,
-        distance: 10px
+        blur: 16px,
+        distance: 6px
       )
     ),
     padding: (
