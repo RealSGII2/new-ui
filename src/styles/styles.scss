@@ -22,52 +22,81 @@
     }
 }
 
+@mixin button-text($button-color) {
+  color: $button-color;
+  background-color: transparent;
+  border-color: transparent;
+
+  &:hover {
+    background-color: transparentize($button-color, $transparent-amount--hover);
+    border-color: transparentize($button-color, $transparent-amount--hover);
+  }
+
+  &:active {
+    background-color: transparentize($button-color, $transparent-amount--active);
+    border-color: transparentize($button-color, $transparent-amount--active);
+  }
+}
+
+@mixin button-stroked($button-color) {
+  color: $button-color;
+  background-color: transparent;
+  border-color: $button-color;
+
+  &:hover {
+    $transparent-amount: 0.8;
+    background-color: transparentize($button-color, $transparent-amount--hover);
+  }
+
+  &:active {
+    $transparent-amount: 0.6;
+    background-color: transparentize($button-color, $transparent-amount--active);
+  }
+}
+
+@mixin button-filled($button-color) {
+  @include button-background($button-color);
+
+  &:hover {
+    @include button-background(lighten($button-color, $color-amount));
+  }
+
+  &:active {
+    @include button-background(darken($button-color, $color-amount));
+  }
+}
+
 @mixin button-color($button-color) {
   $color-amount: 10%;
   $transparent-amount--hover: 0.9;
   $transparent-amount--active: 0.7;
   &--text {
-    color: $button-color;
-    background-color: transparent;
-    border-color: transparent;
-
-    &:hover {
-      background-color: transparentize($button-color, $transparent-amount--hover);
-      border-color: transparentize($button-color, $transparent-amount--hover);
-    }
-
-    &:active {
-      background-color: transparentize($button-color, $transparent-amount--active);
-      border-color: transparentize($button-color, $transparent-amount--active);
-    }
+    @include button-text($button-color);
   }
 
   &--stroked {
-    color: $button-color;
-    background-color: transparent;
-    border-color: $button-color;
-
-    &:hover {
-      $transparent-amount: 0.8;
-      background-color: transparentize($button-color, $transparent-amount--hover);
-    }
-
-    &:active {
-      $transparent-amount: 0.6;
-      background-color: transparentize($button-color, $transparent-amount--active);
-    }
+    @include button-stroked($button-color);
   }
 
   &--filled {
-    @include button-background($button-color);
+    @include button-filled($button-color);
+  }
+}
 
-    &:hover {
-      @include button-background(lighten($button-color, $color-amount));
-    }
+@mixin button-color--toolbar($button-color) {
+  $color-amount: 10%;
+  $transparent-amount--hover: 0.9;
+  $transparent-amount--active: 0.7;
+  &--text {
+    .new-ui.new-button {@include button-text($button-color);}
+  }
 
-    &:active {
-      @include button-background(darken($button-color, $color-amount));
-    }
+  &--stroked {
+    .new-ui.new-button {@include button-stroked($button-color);}
+  }
+
+  &--filled {
+    .new-ui.new-button {@include button-filled($button-color);}
   }
 }
 
@@ -135,10 +164,39 @@
      }
 
      .new-ui.new-button-toolbar {
+       &--default {
+         @include button-color-toolbar(theme($package, 'colors', 'default'));
+       }
+
+       &--brand {
+         @include button-color-toolbar(theme($package, 'colors', 'brand'));
+       }
+
+       &--accent {
+         @include button-color-toolbar(theme($package, 'colors', 'accent'));
+       }
+
+       &--error {
+         @include button-color-toolbar(theme($package, 'colors', 'states', 'error'));
+       }
+
+       &--warn {
+         @include button-color-toolbar(theme($package, 'colors', 'states', 'warn'));
+       }
+
+       &--success {
+         @include button-color-toolbar(theme($package, 'colors', 'states', 'success'));
+       }
+
+       &--info {
+         @include button-color-toolbar(theme($package, 'colors', 'states', 'info'));
+       }
+
        &:not(.pill) {
          .new-ui.new-button {
            margin: 0px;
            display: inline-block;
+           border-radius: 0px;
 
            &:first-child {
              border-radius: $button-border-radius 0 0 $button-border-radius !important;
@@ -154,6 +212,7 @@
          .new-ui.new-button {
            margin: 0px;
            display: inline-block;
+           border-radius: 0px;
 
            &:first-child {
              border-radius: $button-border-radius 0 0 $button-border-radius !important;
