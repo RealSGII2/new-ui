@@ -1,4 +1,4 @@
-@import './defaultThemes/default.scss';
+@import './defaultThemes/default';
 
 @function theme($map, $keys...) {
     @each $key in $keys {
