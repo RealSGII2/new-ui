@@ -139,11 +139,21 @@
          margin: 0px;
          display: inline-block;
 
-         &:first-child {
+         &:first-child:not(.new-button--pill) {
            border-radius: $button-border-radius 0 0 $button-border-radius !important;
          }
 
-         &:last-child {
+         &:last-child:not(.new-button--pill) {
+           border-radius: 0 $button-border-radius $button-border-radius 0 !important;
+         }
+
+         &.new-button--pill:first-child {
+           $button-border-radius: theme($package, 'layout', 'borders', 'radius', 'round');
+           border-radius: $button-border-radius 0 0 $button-border-radius !important;
+         }
+
+         &.new-button--pill:last-child {
+           $button-border-radius: theme($package, 'layout', 'borders', 'radius', 'round');
            border-radius: 0 $button-border-radius $button-border-radius 0 !important;
          }
        }
