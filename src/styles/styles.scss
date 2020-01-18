@@ -84,7 +84,7 @@ $transparent-amount--active: 0.7;
   }
 }
 
-@mixin button-color--toolbar($button-color) {
+@mixin button-color-toolbar($button-color) {
   &--text {
     .new-ui.new-button {@include button-text($button-color);}
   }
