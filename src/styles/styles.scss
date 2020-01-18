@@ -22,14 +22,18 @@
 }
 
 @mixin themable($name, $package) {
-     $button-background: #000000;
-     .new-ui.elevated {
+     .new-ui {
+       outline: none;
+     }
+
+     .new-ui.elevated:not(.new-button--appearance__outline):not(.new-button--appearance__text) {
        box-shadow: 0px theme($package, 'layout', 'elevation', 'base', 'blur') 0 theme($package, 'layout', 'elevation', 'color');
      }
 
      .new-ui.new-button {
        padding: theme($package, 'layout', 'padding', 'button');
        border-width: theme($package, 'layout', 'borders', 'thickness', 'base');
+       border-radius: theme($package, 'layout', 'borders', 'radius', 'base');
      }
 
      .new-ui.new-button.new-button--pill {
@@ -38,6 +42,14 @@
 
      .new-ui.new-button.new-button--tile {
        border-radius: theme($package, 'layout', 'borders', 'radius', 'tile');
+     }
+
+     .new-ui.new-button.new-button--expanded {
+       padding: theme($package, 'layout', 'padding', 'button-expanded');
+     }
+     
+     .new-ui.new-button.new-button--appearance__outline, .new-ui.new-button.new-button--appearance__text {
+       background: transparentize(#000, 100%);
      }
 
      .new-ui.new-button.new-button--state__default.new-button--appearance__text {
@@ -65,7 +77,7 @@
        color: $button-background;
      }
 
-     .new-ui.new-button.new-button--state__default.new-button--is_outlined {
+     .new-ui.new-button.new-button--state__default.new-button--appearance__outline {
        $button-background: theme($package, 'colors', 'default');
        color: $button-background;
        border-color: $button-background;
