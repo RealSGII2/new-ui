@@ -21,6 +21,58 @@
     }
 }
 
+@mixin button-color($button-color) {
+  &--text {
+    color: $button-color;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover {
+      $transparent-amount: 0.8;
+      background-color: transparentize($button-color, $transparent-amount);
+      border-color: transparentize($button-color, $transparent-amount);
+    }
+
+    &:active {
+      $transparent-amount: 0.6;
+      &--text {
+        background-color: transparentize($button-color, $transparent-amount);
+        border-color: transparentize($button-color, $transparent-amount);
+      }
+    }
+  }
+
+  &--stroked {
+    color: $button-color;
+    background-color: transparent;
+    border-color: $button-color;
+
+    &:hover {
+      $transparent-amount: 0.8;
+      background-color: transparentize($button-color, $transparent-amount);
+    }
+
+    &:active {
+      $transparent-amount: 0.6;
+      &--text {
+        background-color: transparentize($button-color, $transparent-amount);
+      }
+    }
+  }
+
+  &--filled {
+    @include button-background($button-color);
+
+    &:hover {
+      @include button-background(lighten($button-color, 20%));
+    }
+
+    &:active {
+      @include button-background(darken($button-color, 20%));
+    }
+  }
+}
+
 @mixin themable($name, $package) {
      .new-ui {
        outline: none;
@@ -55,82 +107,31 @@
 
        // Set color
        &--default {
-         $button-color: theme($package, 'colors', 'default');
+         @include button-color(theme($package, 'colors', 'default'));
        }
 
        &--brand {
-         $button-color: theme($package, 'colors', 'brand');
+         @include button-color(theme($package, 'colors', 'brand'));
        }
 
        &--accent {
-         $button-color: theme($package, 'colors', 'accent');
+         @include button-color(theme($package, 'colors', 'accent'));
        }
 
        &--error {
-         $button-color: theme($package, 'colors', 'states', 'error');
+         @include button-color(theme($package, 'colors', 'states', 'error'));
        }
 
        &--warn {
-         $button-color: theme($package, 'colors', 'states', 'warn');
+         @include button-color(theme($package, 'colors', 'states', 'warn'));
        }
 
        &--success {
-         $button-color: theme($package, 'colors', 'states', 'success');
+         @include button-color(theme($package, 'colors', 'states', 'success'));
        }
 
        &--info {
-         $button-color: theme($package, 'colors', 'states', 'info');
-       }
-
-       // Apply color to button appearance
-       &--text {
-         color: $button-color;
-         background-color: transparent;
-         border-color: transparent;
-       }
-
-       &--stroked {
-         color: $button-color;
-         background-color: transparent;
-         border-color: $button-color;
-       }
-
-       &--filled {
-         @include button-background($button-color);
-       }
-
-       &:hover {
-         $transparent-amount: 0.8;
-         &--text {
-           background-color: transparentize($button-color, $transparent-amount);;
-           border-color: transparentize($button-color, $transparent-amount);;
-         }
-
-         &--stroked {
-           background-color: transparentize($button-color, $transparent-amount);
-           border-color: $button-color;
-         }
-
-         &--filled {
-           @include button-background(lighten($button-color, 20%));
-         }
-       }
-
-       &:active {
-         $transparent-amount: 0.6;
-         &--text {
-           background-color: transparentize($button-color, $transparent-amount);;
-           border-color: transparentize($button-color, $transparent-amount);;
-         }
-
-         &--stroked {
-           background-color: transparentize($button-color, $transparent-amount);
-           border-color: $button-color;
-         }
-
-         &--filled {
-           @include button-background(darken($button-color, 20%));
-         }
+         @include button-color(theme($package, 'colors', 'states', 'info'));
        }
      }
 }
