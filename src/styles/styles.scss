@@ -135,26 +135,33 @@
      }
 
      .new-ui.new-button-toolbar {
-       .new-ui.new-button {
-         margin: 0px;
-         display: inline-block;
+       &:not(.pill) {
+         .new-ui.new-button {
+           margin: 0px;
+           display: inline-block;
 
-         &:first-child:not(.new-button--pill) {
-           border-radius: $button-border-radius 0 0 $button-border-radius !important;
+           &:first-child {
+             border-radius: $button-border-radius 0 0 $button-border-radius !important;
+           }
+
+           &:last-child {
+             border-radius: 0 $button-border-radius $button-border-radius 0 !important;
+           }
          }
+       }
 
-         &:last-child:not(.new-button--pill) {
-           border-radius: 0 $button-border-radius $button-border-radius 0 !important;
-         }
+       &.pill {
+         .new-ui.new-button {
+           margin: 0px;
+           display: inline-block;
 
-         &.new-button--pill:first-child {
-           $button-border-radius: theme($package, 'layout', 'borders', 'radius', 'round');
-           border-radius: $button-border-radius 0 0 $button-border-radius !important;
-         }
+           &:first-child {
+             border-radius: $button-border-radius 0 0 $button-border-radius !important;
+           }
 
-         &.new-button--pill:last-child {
-           $button-border-radius: theme($package, 'layout', 'borders', 'radius', 'round');
-           border-radius: 0 $button-border-radius $button-border-radius 0 !important;
+           &:last-child {
+             border-radius: 0 $button-border-radius $button-border-radius 0 !important;
+           }
          }
        }
      }

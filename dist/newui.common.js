@@ -385,12 +385,12 @@ const exported = Vue => {
 
 /* harmony default export */ var components_NewButton = (exported);
 
-// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6607ec1e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewButtonToolbar/NewButtonToolbar.vue?vue&type=template&id=1bba7f48&
-var NewButtonToolbarvue_type_template_id_1bba7f48_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"new-ui new-button-toolbar"},[_vm._t("default")],2)}
-var NewButtonToolbarvue_type_template_id_1bba7f48_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6607ec1e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewButtonToolbar/NewButtonToolbar.vue?vue&type=template&id=2e5065f2&
+var NewButtonToolbarvue_type_template_id_2e5065f2_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"new-ui new-button-toolbar"},[_vm._t("default")],2)}
+var NewButtonToolbarvue_type_template_id_2e5065f2_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NewButtonToolbar/NewButtonToolbar.vue?vue&type=template&id=1bba7f48&
+// CONCATENATED MODULE: ./src/components/NewButtonToolbar/NewButtonToolbar.vue?vue&type=template&id=2e5065f2&
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewButtonToolbar/NewButtonToolbar.vue?vue&type=script&lang=js&
 //
@@ -401,7 +401,7 @@ var NewButtonToolbarvue_type_template_id_1bba7f48_staticRenderFns = []
 //
 
 /* harmony default export */ var NewButtonToolbarvue_type_script_lang_js_ = ({
-  name: 'NewButton',
+  name: 'NewButtonToolbar',
 });
 
 // CONCATENATED MODULE: ./src/components/NewButtonToolbar/NewButtonToolbar.vue?vue&type=script&lang=js&
@@ -420,8 +420,8 @@ var NewButtonToolbarvue_type_style_index_0_lang_scss_ = __webpack_require__("d87
 
 var NewButtonToolbar_component = normalizeComponent(
   NewButtonToolbar_NewButtonToolbarvue_type_script_lang_js_,
-  NewButtonToolbarvue_type_template_id_1bba7f48_render,
-  NewButtonToolbarvue_type_template_id_1bba7f48_staticRenderFns,
+  NewButtonToolbarvue_type_template_id_2e5065f2_render,
+  NewButtonToolbarvue_type_template_id_2e5065f2_staticRenderFns,
   false,
   null,
   null,
@@ -434,7 +434,7 @@ var NewButtonToolbar_component = normalizeComponent(
 
 
 const NewButtonToolbar_exported = Vue => {
-  Vue.component(NewButNewButtonToolbarton.name, NewButtonToolbar)
+  Vue.component(NewButtonToolbar.name, NewButtonToolbar)
 }
 
 /* harmony default export */ var components_NewButtonToolbar = (NewButtonToolbar_exported);
