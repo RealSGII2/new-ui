@@ -8,11 +8,12 @@
 }
 
 @function light($color) {
-  @return lightness($color) > 50;
+  @return lightness($color) > 65;
 }
 
 @mixin button-background($color) {
     background-color: $color;
+    border-color: $color;
 
     @if (light($color)) {
       color: #000000;
@@ -23,8 +24,8 @@
 
 @mixin button-color($button-color) {
   $color-amount: 10%;
-  $transparent-amount--hover: 0.8;
-  $transparent-amount--active: 0.6;
+  $transparent-amount--hover: 0.9;
+  $transparent-amount--active: 0.7;
   &--text {
     color: $button-color;
     background-color: transparent;
@@ -76,7 +77,7 @@
      }
 
      .new-ui.elevated:not(.new-button--appearance__outline):not(.new-button--appearance__text) {
-       box-shadow: 0px theme($package, 'layout', 'elevation', 'base', 'blur') 0 theme($package, 'layout', 'elevation', 'color');
+       box-shadow: 0px theme($package, 'layout', 'elevation', 'base', 'distance') theme($package, 'layout', 'elevation', 'base', 'blur') theme($package, 'layout', 'elevation', 'color');
      }
 
      .new-ui.new-button {

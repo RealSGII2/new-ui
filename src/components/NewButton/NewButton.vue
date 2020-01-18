@@ -1,5 +1,5 @@
 <template>
-  <button v-bind:class="`new-ui new-button new-button--${state}--${appearance} ${expanded==true ? 'new-button--expanded' : ''}`+' new-button--'+style">
+  <button v-bind:class="`new-ui new-button new-button--${state}--${appearance} ${expanded==true ? 'new-button--expanded' : ''}`+' new-button--'+shape">
     <slot></slot>
   </button>
 </template>
@@ -8,7 +8,7 @@
   export default {
     name: 'NewButton',
     props: {
-      style: {
+      shape: {
         type: String,
         default: 'default',
         validator: function (value) {
