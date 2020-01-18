@@ -11,11 +11,10 @@
   "unpkg": "dist/newui.min.js",
   "scripts": {
     "dev": "babel-node build/local",
-    "build": "rm -rf dist/ && babel-node build/lib",
+    "build": "vue-cli-service build",
     "lint": "eslint --ext .js,.vue docs src build test --fix",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --target lib --name myLib src/index.js"
+    "lib": "vue-cli-service build --target lib --name newui src/index.js"
   },
   "engines": {
     "node": ">= 7.0"
@@ -103,5 +102,8 @@
   },
   "browserslist": [
     "> 1%"
-  ]
+  ],
+  "dependencies": {
+    "@vue/cli-service": "^4.1.2"
+  }
 }
