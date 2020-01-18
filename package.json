@@ -7,8 +7,7 @@
     "src"
   ],
   "main": "dist/newui.js",
-  "module": "dist/newui.js",
-  "unpkg": "dist/newui.min.js",
+  "module": "dist/newui.common.js",
   "scripts": {
     "dev": "babel-node build/local",
     "build": "vue-cli-service build",
