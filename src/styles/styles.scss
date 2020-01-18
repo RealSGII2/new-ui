@@ -48,6 +48,12 @@
        padding: theme($package, 'layout', 'padding', 'button-expanded');
      }
 
+     .new-ui.new-button.new-button--appearance__text {
+       @if (.new-button--state__default) {
+         
+       }
+     }
+
      .new-ui.new-button.new-button--appearance__outline, .new-ui.new-button.new-button--appearance__text {
        background: transparentize(#000, 1);
      }
