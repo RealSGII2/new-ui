@@ -47,9 +47,9 @@
      .new-ui.new-button.new-button--expanded {
        padding: theme($package, 'layout', 'padding', 'button-expanded');
      }
-     
+
      .new-ui.new-button.new-button--appearance__outline, .new-ui.new-button.new-button--appearance__text {
-       background: transparentize(#000, 100%);
+       background: transparentize(#000, 1);
      }
 
      .new-ui.new-button.new-button--state__default.new-button--appearance__text {
