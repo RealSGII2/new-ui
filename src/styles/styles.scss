@@ -24,20 +24,20 @@
 @mixin themable($name, $package) {
      $button-background: #000000;
      .new-ui.elevated {
-       box-shadow: 0px theme($package, 'layout', 'elevation', 'base' 'blur') 0 theme($package, 'layout', 'elevation', 'color');
+       box-shadow: 0px theme($package, 'layout', 'elevation', 'base', 'blur') 0 theme($package, 'layout', 'elevation', 'color');
      }
 
      .new-ui.new-button {
        padding: theme($package, 'layout', 'padding', 'button');
-       border-width: theme($package, 'layout', 'thickness', 'base');
+       border-width: theme($package, 'layout', 'border', 'thickness', 'base');
      }
 
      .new-ui.new-button.new-button--pill {
-       border-radius: theme($package, 'thickness', 'layout', 'border', 'radius', 'round');
+       border-radius: theme($package, 'layout', 'border', 'radius', 'round');
      }
 
      .new-ui.new-button.new-button--tile {
-       border-radius: theme($package, 'thickness', 'layout', 'border', 'radius', 'tile');
+       border-radius: theme($package, 'layout', 'border', 'radius', 'tile');
      }
 
      .new-ui.new-button.new-button--state__default.new-button--appearance__text {
@@ -122,6 +122,6 @@
      }
 }
 
-.new-ui.new-app.new-app--themeable.new-app--use_styles {
-  @include themable('default', $theme-package);
-}
+.new-ui.new-app.new-app--themeable.new-app--use_styles {}
+
+@include themable(default, $theme-package);
