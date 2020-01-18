@@ -1,5 +1,5 @@
 <template>
-  <button v-bind:class="class">
+  <button :class="[class]">
     <slot></slot>
   </button>
 </template>
@@ -35,11 +35,15 @@
       }
     },
     computed: {
-      class: function() {
-        let returned =  `new-ui new-button new-button--${this.state}--${this.appearance}`;
-        if (this.expanded == true) returned += ` new-button--expanded`;
-        if (this.style != "default") returned += ` new-button--${this.style}`;
-        return returned;
+      class: function () {
+        let returned = `new-ui new-button new-button--${this.state}--${this.appearance}`
+        if (this.expanded == true) {
+          returned = returned + ` new-button--expanded`
+        }
+        if (this.style != "default") {
+          returned = returned + ` new-button--${this.style}`
+        }
+        return returned
       }
     }
   }
