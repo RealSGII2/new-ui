@@ -1,0 +1,169 @@
+@import './defaultThemes/default.scss';
+
+@function theme($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+@function shorten-theme($map, $key-begin, $keys...) {
+  @each $key in list.join($key-begin, $keys) {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+@function theme-elevation-base($package, $keys...) {
+  $key-begin: 'layout', 'elevaton', 'base';
+  @return shorten-theme($package, $key-begin, $keys);
+}
+
+@function theme-elevation-elevated($package, $keys...) {
+  $key-begin: 'layout', 'elevaton', 'elevated';
+  @return shorten-theme($package, $key-begin, $keys);
+}
+
+@function theme-padding($package, $keys...) {
+  $key-begin: 'layout', 'padding';
+  @return shorten-theme($package, $key-begin, $keys);
+}
+
+@function theme-border($package, $keys...) {
+  $key-begin: 'layout', 'borders';
+  @return shorten-theme($package, $key-begin, $keys);
+}
+
+@function theme-color($package, $keys...) {
+  $key-begin: 'colors';
+  @return shorten-theme($package, $key-begin, $keys);
+}
+
+@function theme-textcolor($package, $keys...) {
+  $key-begin: 'colors', 'text';
+  @return shorten-theme($package, $key-begin, $keys);
+}
+
+@function theme-backgroundcolor($package, $keys...) {
+  $key-begin: 'colors', 'background';
+  @return shorten-theme($package, $key-begin, $keys);
+}
+
+@function theme-state($package, $keys...) {
+  $key-begin: 'colors', 'states';
+  @return shorten-theme($package, $key-begin, $keys);
+}
+
+@function light($color) {
+  @return lightness($color) > 50;
+}
+
+@mixin button-background($color) {
+    background-color: $color;
+
+    @if (light($color)) {
+      color: #000000;
+    } @else {
+      color: #ffffff;
+    }
+}
+
+@mixin themable($name, $package) {
+   .new-ui.new-app.new-app--themeable.new-app--use_styles {
+     $button-background: #000000;
+     .new-ui.elevated {
+       box-shadow: 0px theme-elevation-base($package, 'blur') 0 theme($package, 'layout', 'elevation', 'color');
+     }
+
+     .new-ui.new-button {
+       padding: theme-padding($package, 'button');
+       border-width: theme-border('thickness', 'base');
+     }
+
+     .new-ui.new-button.new-button--pill {
+       border-radius: theme-border('radius', 'round');
+     }
+
+     .new-ui.new-button.new-button--tile {
+       border-radius: theme-border('radius', 'tile');
+     }
+
+     .new-ui.new-button.new-button--state__default.new-button--appearance__text {
+       $button-background: theme-color('default');
+       color: $button-background;
+     }
+     .new-ui.new-button.new-button--state__brand.new-button--appearance__text {
+       $button-background: theme-color('brand');
+       color: $button-background;
+     }
+     .new-ui.new-button.new-button--state__error.new-button--appearance__text {
+       $button-background: theme-state('error');
+       color: $button-background;
+     }
+     .new-ui.new-button.new-button--state__success.new-button--appearance__text {
+       $button-background: theme-state('success');
+       color: $button-background;
+     }
+     .new-ui.new-button.new-button--state__warn.new-button--appearance__text {
+       $button-background: theme-state('warn');
+       color: $button-background;
+     }
+     .new-ui.new-button.new-button--state__info.new-button--appearance__text {
+       $button-background: theme-state('info');
+       color: $button-background;
+     }
+
+     .new-ui.new-button.new-button--state__default.new-button--is_outlined {
+       $button-background: theme-color('default');
+       border-color: $button-background;
+     }
+     .new-ui.new-button.new-button--state__brand.new-button--appearance__outline {
+       $button-background: theme-color('brand');
+       border-color: $button-background;
+     }
+     .new-ui.new-button.new-button--state__error.new-button--appearance__outline {
+       $button-background: theme-state('error');
+       border-color: $button-background;
+     }
+     .new-ui.new-button.new-button--state__success.new-button--appearance__outline {
+       $button-background: theme-state('success');
+       border-color: $button-background;
+     }
+     .new-ui.new-button.new-button--state__warn.new-button--appearance__outline {
+       $button-background: theme-state('warn');
+       border-color: $button-background;
+     }
+     .new-ui.new-button.new-button--state__info.new-button--appearance__outline {
+       $button-background: theme-state('info');
+       border-color: $button-background;
+     }
+
+     .new-ui.new-button.new-button--state__default.new-button--appearance__default {
+       $button-background: theme-color('default');
+       @include button-background($button-background);
+     }
+     .new-ui.new-button.new-button--state__brand.new-button--appearance__default {
+       $button-background: theme-color('brand');
+       @include button-background($button-background);
+     }
+     .new-ui.new-button.new-button--state__error.new-button--appearance__default {
+       $button-background: theme-state('error');
+       @include button-background($button-background);
+     }
+     .new-ui.new-button.new-button--state__success.new-button--appearance__default {
+       $button-background: theme-state('success');
+       @include button-background($button-background);
+     }
+     .new-ui.new-button.new-button--state__warn.new-button--appearance__default {
+       $button-background: theme-state('warn');
+       @include button-background($button-background);
+     }
+     .new-ui.new-button.new-button--state__info.new-button--appearance__default {
+       $button-background: theme-state('info');
+       @include button-background($button-background);
+     }
+   }
+}
+
+
+@import themable('default', $theme-package);
