@@ -36,10 +36,12 @@
        border-radius: theme($package, 'layout', 'borders', 'radius', 'base');
        padding: theme($package, 'layout', 'padding', 'button');
        border-width: theme($package, 'layout', 'borders', 'thickness', 'base');
+       border-style: solid;
+       min-width: 50px;
 
        // Apply shape
        &--pill {
-         border-radius: theme($package, 'layout', 'borders', 'radius', 'rounded');
+         border-radius: theme($package, 'layout', 'borders', 'radius', 'round');
        }
 
        &--tile {
@@ -83,6 +85,52 @@
        // Apply color to button appearance
        &--text {
          color: $button-color;
+         background-color: transparent;
+         border-color: transparent;
+       }
+
+       &--stroked {
+         color: $button-color;
+         background-color: transparent;
+         border-color: $button-color;
+       }
+
+       &--filled {
+         @include button-background($button-color);
+       }
+
+       &:hover {
+         $transparent-amount: 0.8;
+         &--text {
+           background-color: transparentize($button-color, $transparent-amount);;
+           border-color: transparentize($button-color, $transparent-amount);;
+         }
+
+         &--stroked {
+           background-color: transparentize($button-color, $transparent-amount);
+           border-color: $button-color;
+         }
+
+         &--filled {
+           @include button-background(lighten($button-color, 20%));
+         }
+       }
+
+       &:active {
+         $transparent-amount: 0.6;
+         &--text {
+           background-color: transparentize($button-color, $transparent-amount);;
+           border-color: transparentize($button-color, $transparent-amount);;
+         }
+
+         &--stroked {
+           background-color: transparentize($button-color, $transparent-amount);
+           border-color: $button-color;
+         }
+
+         &--filled {
+           @include button-background(darken($button-color, 20%));
+         }
        }
      }
 }
