@@ -1,5 +1,9 @@
 @import './defaultThemes/default';
 
+$color-amount: 10%;
+$transparent-amount--hover: 0.9;
+$transparent-amount--active: 0.7;
+
 @function theme($map, $keys...) {
     @each $key in $keys {
         $map: map-get($map, $key);
@@ -67,9 +71,6 @@
 }
 
 @mixin button-color($button-color) {
-  $color-amount: 10%;
-  $transparent-amount--hover: 0.9;
-  $transparent-amount--active: 0.7;
   &--text {
     @include button-text($button-color);
   }
@@ -84,9 +85,6 @@
 }
 
 @mixin button-color--toolbar($button-color) {
-  $color-amount: 10%;
-  $transparent-amount--hover: 0.9;
-  $transparent-amount--active: 0.7;
   &--text {
     .new-ui.new-button {@include button-text($button-color);}
   }
