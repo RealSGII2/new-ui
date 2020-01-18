@@ -21,7 +21,7 @@
       },
       appearance: {
         type: String,
-        default: 'text',
+        default: 'filled',
         validator: function (value) {
           return ['stroked', 'filled', 'text'].indexOf(value) !== -1
         }
