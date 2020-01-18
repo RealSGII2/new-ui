@@ -1,7 +1,7 @@
 import NewCard from './NewCard'
-import NewCardContent from './NewCardContent/NewCardContent'
-import NewCardHeader from './NewCardHeader/NewCardHeader'
-import NewCardHeaderText from './NewCardHeader/NewCardHeaderText'
+import NewCardContent from './parts/NewCardContent/NewCardContent'
+import NewCardHeader from './parts/NewCardHeader/NewCardHeader'
+import NewCardHeaderText from './parts/NewCardHeader/NewCardHeaderText'
 
 const exported = Vue => {
   Vue.component(NewCard.name, NewCard)
