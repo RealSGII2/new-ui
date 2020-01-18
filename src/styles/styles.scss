@@ -22,23 +22,22 @@
 }
 
 @mixin button-color($button-color) {
+  $color-amount: 10%;
+  $transparent-amount--hover: 0.8;
+  $transparent-amount--active: 0.6;
   &--text {
     color: $button-color;
     background-color: transparent;
     border-color: transparent;
 
     &:hover {
-      $transparent-amount: 0.8;
-      background-color: transparentize($button-color, $transparent-amount);
-      border-color: transparentize($button-color, $transparent-amount);
+      background-color: transparentize($button-color, $transparent-amount--hover);
+      border-color: transparentize($button-color, $transparent-amount--hover);
     }
 
     &:active {
-      $transparent-amount: 0.6;
-      &--text {
-        background-color: transparentize($button-color, $transparent-amount);
-        border-color: transparentize($button-color, $transparent-amount);
-      }
+      background-color: transparentize($button-color, $transparent-amount--active);
+      border-color: transparentize($button-color, $transparent-amount--active);
     }
   }
 
@@ -49,14 +48,12 @@
 
     &:hover {
       $transparent-amount: 0.8;
-      background-color: transparentize($button-color, $transparent-amount);
+      background-color: transparentize($button-color, $transparent-amount--hover);
     }
 
     &:active {
       $transparent-amount: 0.6;
-      &--text {
-        background-color: transparentize($button-color, $transparent-amount);
-      }
+      background-color: transparentize($button-color, $transparent-amount--active);
     }
   }
 
@@ -64,11 +61,11 @@
     @include button-background($button-color);
 
     &:hover {
-      @include button-background(lighten($button-color, 20%));
+      @include button-background(lighten($button-color, $color-amount));
     }
 
     &:active {
-      @include button-background(darken($button-color, 20%));
+      @include button-background(darken($button-color, $color-amount));
     }
   }
 }
@@ -83,8 +80,7 @@
      }
 
      .new-ui.new-button {
-       $button-color: #000000;
-
+       transition: theme($package, 'elements', 'buttons', 'transition-time');
        border-radius: theme($package, 'layout', 'borders', 'radius', 'base');
        padding: theme($package, 'layout', 'padding', 'button');
        border-width: theme($package, 'layout', 'borders', 'thickness', 'base');
