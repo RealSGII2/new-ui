@@ -1,14 +1,9 @@
-import material from './material'
-import * as MdComponents from './components'
+import * as Components from './components'
 
-let VueMaterial = Vue => {
-  material(Vue)
-
-  Object.values(MdComponents).forEach((MdComponent) => {
-    Vue.use(MdComponent)
+let NewUI = Vue => {
+  Object.values(Components).forEach((component) => {
+    Vue.use(component)
   })
 }
 
-VueMaterial.version = '__VERSION__'
-
-export default VueMaterial
+export default NewUI
