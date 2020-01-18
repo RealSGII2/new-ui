@@ -165,5 +165,5 @@
 }
 
 .new-ui.new-app.new-app--themeable.new-app--use_styles {
-  @import themable('default', $theme-package);
+  @include themable('default', $theme-package);
 }
