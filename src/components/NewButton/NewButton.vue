@@ -1,5 +1,5 @@
 <template>
-  <button v-bind:class="class">
+  <button v-bind:class="`new-ui new-button new-button--${state}--${appearance}`">
     <slot></slot>
   </button>
 </template>
