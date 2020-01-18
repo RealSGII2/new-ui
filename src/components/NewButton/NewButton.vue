@@ -1,5 +1,5 @@
 <template>
-  <button v-bind:class="[style]">
+  <button v-bind:class="class">
     <slot></slot>
   </button>
 </template>

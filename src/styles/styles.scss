@@ -80,7 +80,7 @@
      }
 
      .new-ui.new-button {
-       transition: theme($package, 'elements', 'buttons', 'transition-time');
+       transition: theme($package, 'elements', 'button', 'transition-time');
        border-radius: theme($package, 'layout', 'borders', 'radius', 'base');
        padding: theme($package, 'layout', 'padding', 'button');
        border-width: theme($package, 'layout', 'borders', 'thickness', 'base');
