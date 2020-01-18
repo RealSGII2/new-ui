@@ -8,7 +8,8 @@
 }
 
 @function shorten-theme($map, $key-begin, $keys...) {
-  @each $key in list.join($key-begin, $keys) {
+  $list: list.join($key-begin, $keys);
+  @each $key in $list {
     $map: map-get($map, $key);
   }
   @return $map;

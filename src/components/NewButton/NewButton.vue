@@ -11,6 +11,7 @@
 </script>
 
 <style lang="scss">
+  @import '../../styles/styles.scss';
   .test {
     background-color: #ccffff;
   }
