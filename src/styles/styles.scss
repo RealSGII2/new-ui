@@ -70,7 +70,6 @@
 }
 
 @mixin themable($name, $package) {
-   .new-ui.new-app.new-app--themeable.new-app--use_styles {
      $button-background: #000000;
      .new-ui.elevated {
        box-shadow: 0px theme-elevation-base($package, 'blur') 0 theme($package, 'layout', 'elevation', 'color');
@@ -163,8 +162,8 @@
        $button-background: theme-state('info');
        @include button-background($button-background);
      }
-   }
 }
 
-
-@import themable('default', $theme-package);
+.new-ui.new-app.new-app--themeable.new-app--use_styles {
+  @import themable('default', $theme-package);
+}
