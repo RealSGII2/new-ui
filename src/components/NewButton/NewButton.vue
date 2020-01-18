@@ -14,11 +14,11 @@
         validator: function (value) {
           return ['default', 'pill', 'tile'].indexOf(value) !== -1
         }
-      }
+      },
       expanded: {
         type: Boolean,
         default: false
-      }
+      },
       appearance: {
         type: String,
         default: 'text',
