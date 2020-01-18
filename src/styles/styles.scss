@@ -29,15 +29,15 @@
 
      .new-ui.new-button {
        padding: theme($package, 'layout', 'padding', 'button');
-       border-width: theme($package, 'layout', 'border', 'thickness', 'base');
+       border-width: theme($package, 'layout', 'borders', 'thickness', 'base');
      }
 
      .new-ui.new-button.new-button--pill {
-       border-radius: theme($package, 'layout', 'border', 'radius', 'round');
+       border-radius: theme($package, 'layout', 'borders', 'radius', 'round');
      }
 
      .new-ui.new-button.new-button--tile {
-       border-radius: theme($package, 'layout', 'border', 'radius', 'tile');
+       border-radius: theme($package, 'layout', 'borders', 'radius', 'tile');
      }
 
      .new-ui.new-button.new-button--state__default.new-button--appearance__text {
