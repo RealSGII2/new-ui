@@ -31,27 +31,63 @@
      }
 
      .new-ui.new-button {
+       $button-color: #000000;
+
+       border-radius: theme($package, 'layout', 'borders', 'radius', 'base');
        padding: theme($package, 'layout', 'padding', 'button');
        border-width: theme($package, 'layout', 'borders', 'thickness', 'base');
-       border-radius: theme($package, 'layout', 'borders', 'radius', 'base');
-     }
 
-     .new-ui.new-button.new-button--pill {
-       border-radius: theme($package, 'layout', 'borders', 'radius', 'round');
-     }
+       // Apply shape
+       &--pill {
+         border-radius: theme($package, 'layout', 'borders', 'radius', 'rounded');
+       }
 
-     .new-ui.new-button.new-button--tile {
-       border-radius: theme($package, 'layout', 'borders', 'radius', 'tile');
-     }
+       &--tile {
+         border-radius: theme($package, 'layout', 'borders', 'radius', 'tile');
+       }
 
-     .new-ui.new-button.new-button--expanded {
-       padding: theme($package, 'layout', 'padding', 'button-expanded');
+       // Apply padding
+       &--expanded {
+         padding: theme($package, 'layout', 'padding', 'button-expanded');
+       }
+
+       // Set color
+       &--default {
+         $button-color: theme($package, 'colors', 'default');
+       }
+
+       &--brand {
+         $button-color: theme($package, 'colors', 'brand');
+       }
+
+       &--accent {
+         $button-color: theme($package, 'colors', 'accent');
+       }
+
+       &--error {
+         $button-color: theme($package, 'colors', 'states', 'error');
+       }
+
+       &--warn {
+         $button-color: theme($package, 'colors', 'states', 'warn');
+       }
+
+       &--success {
+         $button-color: theme($package, 'colors', 'states', 'success');
+       }
+
+       &--info {
+         $button-color: theme($package, 'colors', 'states', 'info');
+       }
+
+       // Apply color to button appearance
+       &--text {
+         color: $button-color;
+       }
      }
 
      .new-ui.new-button.new-button--appearance__text {
-       @if (.new-button--state__default) {
-         
-       }
+       $button-color: theme($package, 'colors', 'default');
      }
 
      .new-ui.new-button.new-button--appearance__outline, .new-ui.new-button.new-button--appearance__text {
