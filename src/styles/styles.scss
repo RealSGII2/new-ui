@@ -199,7 +199,7 @@ $transparent-amount--active: 0.7;
 
      .new-ui.new-card {
        padding: theme($package, 'layout', 'padding', 'base');
-       border-radius: theme($package, 'layout', 'border', 'radius', 'base');
+       border-radius: theme($package, 'layout', 'borders', 'radius', 'base');
 
        &.interactable:hover {
          box-shadow: 0px theme($package, 'layout', 'elevation', 'elevated', 'distance') theme($package, 'layout', 'elevation', 'elevated', 'blur') theme($package, 'layout', 'elevation', 'color');
