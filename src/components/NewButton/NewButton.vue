@@ -36,7 +36,10 @@
     },
     computed: {
       class: function() {
-        let returned =  `new-ui new-button new-button--${this.state}--${this.appearance} new-button--${if (this.style!=='default'){this.style}} new-button--${if (this.expanded!==false){'expanded'}}`;
+        let returned =  `new-ui new-button new-button--${this.state}--${this.appearance}`;
+        if (this.expanded == true) returned += ` new-button--expanded`;
+        if (this.style != "default") returned += ` new-button--${this.style}`;
+        return returned;
       }
     }
   }
