@@ -7,54 +7,6 @@
     @return $map;
 }
 
-@function shorten-theme($map, $key-begin, $keys...) {
-  $list: map-merge($key-begin, $keys);
-  @each $key in $list {
-    $map: map-get($map, $key);
-  }
-  @return $map;
-}
-
-@function theme-elevation-base($package, $keys...) {
-  $key-begin: 'layout', 'elevaton', 'base';
-  @return shorten-theme($package, $key-begin, $keys);
-}
-
-@function theme-elevation-elevated($package, $keys...) {
-  $key-begin: 'layout', 'elevaton', 'elevated';
-  @return shorten-theme($package, $key-begin, $keys);
-}
-
-@function theme-padding($package, $keys...) {
-  $key-begin: 'layout', 'padding';
-  @return shorten-theme($package, $key-begin, $keys);
-}
-
-@function theme-border($package, $keys...) {
-  $key-begin: 'layout', 'borders';
-  @return shorten-theme($package, $key-begin, $keys);
-}
-
-@function theme-color($package, $keys...) {
-  $key-begin: 'colors';
-  @return shorten-theme($package, $key-begin, $keys);
-}
-
-@function theme-textcolor($package, $keys...) {
-  $key-begin: 'colors', 'text';
-  @return shorten-theme($package, $key-begin, $keys);
-}
-
-@function theme-backgroundcolor($package, $keys...) {
-  $key-begin: 'colors', 'background';
-  @return shorten-theme($package, $key-begin, $keys);
-}
-
-@function theme-state($package, $keys...) {
-  $key-begin: 'colors', 'states';
-  @return shorten-theme($package, $key-begin, $keys);
-}
-
 @function light($color) {
   @return lightness($color) > 50;
 }
@@ -72,94 +24,100 @@
 @mixin themable($name, $package) {
      $button-background: #000000;
      .new-ui.elevated {
-       box-shadow: 0px theme-elevation-base($package, 'blur') 0 theme($package, 'layout', 'elevation', 'color');
+       box-shadow: 0px theme($package, 'layout', 'elevation', 'base' 'blur') 0 theme($package, 'layout', 'elevation', 'color');
      }
 
      .new-ui.new-button {
-       padding: theme-padding($package, 'button');
-       border-width: theme-border('thickness', 'base');
+       padding: theme($package, 'layout', 'padding', 'button');
+       border-width: theme($package, 'layout', 'thickness', 'base');
      }
 
      .new-ui.new-button.new-button--pill {
-       border-radius: theme-border('radius', 'round');
+       border-radius: theme($package, 'thickness', 'layout', 'border', 'radius', 'round');
      }
 
      .new-ui.new-button.new-button--tile {
-       border-radius: theme-border('radius', 'tile');
+       border-radius: theme($package, 'thickness', 'layout', 'border', 'radius', 'tile');
      }
 
      .new-ui.new-button.new-button--state__default.new-button--appearance__text {
-       $button-background: theme-color('default');
+       $button-background: theme($package, 'colors', 'default');
        color: $button-background;
      }
      .new-ui.new-button.new-button--state__brand.new-button--appearance__text {
-       $button-background: theme-color('brand');
+       $button-background: theme($package, 'colors', 'brand');
        color: $button-background;
      }
      .new-ui.new-button.new-button--state__error.new-button--appearance__text {
-       $button-background: theme-state('error');
+       $button-background: theme($package, 'colors', 'states', 'error');
        color: $button-background;
      }
      .new-ui.new-button.new-button--state__success.new-button--appearance__text {
-       $button-background: theme-state('success');
+       $button-background: theme($package, 'colors', 'states', 'success');
        color: $button-background;
      }
      .new-ui.new-button.new-button--state__warn.new-button--appearance__text {
-       $button-background: theme-state('warn');
+       $button-background: theme($package, 'colors', 'states', 'warn');
        color: $button-background;
      }
      .new-ui.new-button.new-button--state__info.new-button--appearance__text {
-       $button-background: theme-state('info');
+       $button-background: theme($package, 'colors', 'states', 'info');
        color: $button-background;
      }
 
      .new-ui.new-button.new-button--state__default.new-button--is_outlined {
-       $button-background: theme-color('default');
+       $button-background: theme($package, 'colors', 'default');
+       color: $button-background;
        border-color: $button-background;
      }
      .new-ui.new-button.new-button--state__brand.new-button--appearance__outline {
-       $button-background: theme-color('brand');
+       $button-background: theme($package, 'colors', 'brand');
+       color: $button-background;
        border-color: $button-background;
      }
      .new-ui.new-button.new-button--state__error.new-button--appearance__outline {
-       $button-background: theme-state('error');
+       $button-background: theme($package, 'colors', 'states', 'error');
+       color: $button-background;
        border-color: $button-background;
      }
      .new-ui.new-button.new-button--state__success.new-button--appearance__outline {
-       $button-background: theme-state('success');
+       $button-background: theme($package, 'colors', 'states', 'success');
+       color: $button-background;
        border-color: $button-background;
      }
      .new-ui.new-button.new-button--state__warn.new-button--appearance__outline {
-       $button-background: theme-state('warn');
+       $button-background: theme($package, 'colors', 'states', 'warn');
+       color: $button-background;
        border-color: $button-background;
      }
      .new-ui.new-button.new-button--state__info.new-button--appearance__outline {
-       $button-background: theme-state('info');
+       $button-background: theme($package, 'colors', 'states', 'info');
+       color: $button-background;
        border-color: $button-background;
      }
 
      .new-ui.new-button.new-button--state__default.new-button--appearance__default {
-       $button-background: theme-color('default');
+       $button-background: theme($package, 'colors', 'default');
        @include button-background($button-background);
      }
      .new-ui.new-button.new-button--state__brand.new-button--appearance__default {
-       $button-background: theme-color('brand');
+       $button-background: theme($package, 'colors', 'brand');
        @include button-background($button-background);
      }
      .new-ui.new-button.new-button--state__error.new-button--appearance__default {
-       $button-background: theme-state('error');
+       $button-background: theme($package, 'colors', 'states', 'error');
        @include button-background($button-background);
      }
      .new-ui.new-button.new-button--state__success.new-button--appearance__default {
-       $button-background: theme-state('success');
+       $button-background: theme($package, 'colors', 'states', 'success');
        @include button-background($button-background);
      }
      .new-ui.new-button.new-button--state__warn.new-button--appearance__default {
-       $button-background: theme-state('warn');
+       $button-background: theme($package, 'colors', 'states', 'warn');
        @include button-background($button-background);
      }
      .new-ui.new-button.new-button--state__info.new-button--appearance__default {
-       $button-background: theme-state('info');
+       $button-background: theme($package, 'colors', 'states', 'info');
        @include button-background($button-background);
      }
 }
