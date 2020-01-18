@@ -190,12 +190,14 @@ $transparent-amount--active: 0.7;
          @include button-color-toolbar(theme($package, 'colors', 'states', 'info'));
        }
 
+       .new-ui.new-button {
+         margin: 0px !important;
+         display: inline-block !important;
+         border-radius: 0px !important;
+       }
+
        &:not(.pill) {
          .new-ui.new-button {
-           margin: 0px;
-           display: inline-block;
-           border-radius: 0px;
-
            &:first-child {
              border-radius: $button-border-radius 0 0 $button-border-radius !important;
            }
@@ -208,10 +210,6 @@ $transparent-amount--active: 0.7;
 
        &.pill {
          .new-ui.new-button {
-           margin: 0px;
-           display: inline-block;
-           border-radius: 0px;
-
            &:first-child {
              border-radius: $button-border-radius 0 0 $button-border-radius !important;
            }
