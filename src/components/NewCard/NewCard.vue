@@ -1,5 +1,6 @@
 <template>
-  <div class="new-ui new-card">
+  <div class="new-ui new-card" :class="classes">
+    <slot></slot>
   </div>
 </template>
 
@@ -7,46 +8,22 @@
   export default {
     name: 'NewButton',
     props: {
-      shape: {
-        type: String,
-        default: 'default',
-        validator: function (value) {
-          return ['default', 'pill', 'tile'].indexOf(value) !== -1
-        }
-      },
-      expanded: {
-        type: Boolean,
-        default: false
-      },
-      appearance: {
-        type: String,
-        default: 'filled',
-        validator: function (value) {
-          return ['stroked', 'filled', 'text'].indexOf(value) !== -1
-        }
-      },
-      state: {
-        type: String,
-        default: 'default',
-        validator: function (value) {
-          return ['info', 'success', 'warn', 'error', 'default', 'accent', 'brand'].indexOf(value) !== -1
-        }
+      interactable: Boolean
+    },
+    data: () => {
+      provided: {
+        expanded: false
       }
     },
+    provide: () => {
+      card: this.provided
+    },
     computed: {
-      is_expanded: function () {
-        if (this.expanded == true) {return 'new-button--expanded'}
-        return ''
-      },
-      class: function () {
-        let returned = `new-ui new-button new-button--${this.state}--${this.appearance}`
-        if (this.expanded == true) {
-          returned = returned + ` new-button--expanded`
+      classes: () => {
+        return {
+          "expanded": this.provided.expanded,
+          "interactable": this.interactable
         }
-        if (this.style != "default") {
-          returned = returned + ` new-button--${this.style}`
-        }
-        return returned
       }
     }
   }
