@@ -4,10 +4,10 @@
   @include button-background($button-color);
 
   &:hover {
-    @include button-background(lighten($button-color, $color-amount));
+    @include button-background(lighten($button-color, $button-change-color-amount));
   }
 
   &:active {
-    @include button-background(darken($button-color, $color-amount));
+    @include button-background(darken($button-color, $button-change-color-amount));
   }
 }

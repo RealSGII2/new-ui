@@ -5,11 +5,11 @@
 
   &:hover {
     $transparent-amount: 0.8;
-    background-color: transparentize($button-color, $transparent-amount--hover);
+    background-color: transparentize($button-color, $button-transparent-amount--hover);
   }
 
   &:active {
     $transparent-amount: 0.6;
-    background-color: transparentize($button-color, $transparent-amount--active);
+    background-color: transparentize($button-color, $button-transparent-amount--active);
   }
 }

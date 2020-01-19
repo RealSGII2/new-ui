@@ -1,15 +1,17 @@
+@import '../../_theme.scss';
+
 @mixin button-text($button-color) {
   color: $button-color;
   background-color: transparent;
   border-color: transparent;
 
   &:hover {
-    background-color: transparentize($button-color, $transparent-amount--hover);
-    border-color: transparentize($button-color, $transparent-amount--hover);
+    background-color: transparentize($button-color, $button-transparent-amount--hover);
+    border-color: transparentize($button-color, $button-transparent-amount--hover);
   }
 
   &:active {
-    background-color: transparentize($button-color, $transparent-amount--active);
-    border-color: transparentize($button-color, $transparent-amount--active);
+    background-color: transparentize($button-color, $button-transparent-amount--active);
+    border-color: transparentize($button-color, $button-transparent-amount--active);
   }
 }
