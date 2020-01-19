@@ -528,8 +528,13 @@ $transparent-amount--active: 0.7;
   .new-ui.new-appbar {
     width: 100%;
     padding: 14px;
+    padding-right: 30px;
     box-shadow: 0px theme($package, 'layout', 'elevation', 'base', 'distance') theme($package, 'layout', 'elevation', 'base', 'blur') 3px theme($package, 'layout', 'elevation', 'color');
     transition: 0.3s;
+
+    * {
+      display: inline-block;
+    }
 
     &--fixed {
       position: fixed;
@@ -552,32 +557,36 @@ $transparent-amount--active: 0.7;
     float: right;
   }
 
+  .new-ui.new-appbar__title-content {
+    margin: 0;
+  }
+
   .new-ui.new-appbar--state {
-    &.-default {
+    &-default {
       @include color-background(theme($package, 'colors', 'default'));
     }
 
-    &.-brand {
+    &-brand {
       @include color-background(theme($package, 'colors', 'brand'));
     }
 
-    &.-accent {
+    &-accent {
       @include color-background(theme($package, 'colors', 'accent'));
     }
 
-    &.-error {
+    &-error {
       @include color-background(theme($package, 'colors', 'states', 'error'));
     }
 
-    &.-warn {
+    &-warn {
       @include color-background(theme($package, 'colors', 'states', 'warn'));
     }
 
-    &.-success {
+    &-success {
       @include color-background(theme($package, 'colors', 'states', 'success'));
     }
 
-    &.-info {
+    &-info {
       @include color-background(theme($package, 'colors', 'states', 'info'));
     }
   }

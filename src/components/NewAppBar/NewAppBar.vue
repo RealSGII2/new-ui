@@ -4,7 +4,7 @@
 
     </div>
     <div class="new-ui new-appbar__title">
-      <h3>
+      <h3 class="new-ui new-appbar__title-content">
         {{ title }}
       </h3>
     </div>
