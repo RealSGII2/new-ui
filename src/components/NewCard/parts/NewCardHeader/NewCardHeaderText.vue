@@ -7,9 +7,11 @@
 <script>
   export default {
     name: 'NewCardHeaderText',
-    data: () => ({
-      parentClasses: null
-    }),
+    data: () => {
+      return {
+        parentClasses: null
+      }
+    },
     mounted () {
       this.parentClasses = this.$parent.$el.classList
       if (this.parentClasses.contains('new-card__header')) {
