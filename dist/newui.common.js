@@ -231,12 +231,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"71d1dc0e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewAppBar/NewAppBar.vue?vue&type=template&id=7b876468&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"new-ui new-appbar",class:[_vm.stateClass, {'new-appbar--collapsed': _vm.collapsed}]},[_c('div',{staticClass:"new-ui new-appbar__menu-button"}),_c('div',{staticClass:"new-ui new-appbar__title"},[_c('h3',[_vm._v(" "+_vm._s(_vm.title)+" ")])]),_c('div',{staticClass:"new-ui new-appbar__actions"},[_vm._t("actions")],2)])}
+// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"71d1dc0e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewAppBar/NewAppBar.vue?vue&type=template&id=57c6512b&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"new-ui new-appbar",class:[_vm.stateClass, {'new-appbar--collapsed': _vm.collapsed}]},[_c('div',{staticClass:"new-ui new-appbar__menu-button"}),_c('div',{staticClass:"new-ui new-appbar__title"},[_c('h3',{staticClass:"new-ui new-appbar__title-content"},[_vm._v(" "+_vm._s(_vm.title)+" ")])]),_c('div',{staticClass:"new-ui new-appbar__actions"},[_vm._t("actions")],2)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NewAppBar/NewAppBar.vue?vue&type=template&id=7b876468&
+// CONCATENATED MODULE: ./src/components/NewAppBar/NewAppBar.vue?vue&type=template&id=57c6512b&
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewAppBar/NewAppBar.vue?vue&type=script&lang=js&
 //

@@ -532,6 +532,14 @@ $transparent-amount--active: 0.7;
     box-shadow: 0px theme($package, 'layout', 'elevation', 'base', 'distance') theme($package, 'layout', 'elevation', 'base', 'blur') 3px theme($package, 'layout', 'elevation', 'color');
     transition: 0.3s;
 
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+    flex-flow: row wrap;
+    position: relative;
+    z-index: 2;
+
     * {
       display: inline-block;
     }
@@ -554,7 +562,7 @@ $transparent-amount--active: 0.7;
   }
 
   .new-ui.new-appbar__actions {
-    float: right;
+    justify-content: flex-end;
   }
 
   .new-ui.new-appbar__title-content {
