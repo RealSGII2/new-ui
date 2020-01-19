@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Validator from 'src/utils/validate'
+  import Validator from '../../../../../utils/validate'
   export default {
     name: 'NewCardMedia',
     props: {
