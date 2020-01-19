@@ -562,7 +562,11 @@ $transparent-amount--active: 0.7;
   }
 
   .new-ui.new-appbar__actions {
+    display: flex;
+    align-items: center;
+    flex: 1;
     justify-content: flex-end;
+    order: 10;
   }
 
   .new-ui.new-appbar__title-content {
