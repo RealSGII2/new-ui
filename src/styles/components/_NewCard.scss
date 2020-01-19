@@ -22,18 +22,18 @@
 }
 
 .new-ui.new-card {
-  padding: theme($package, 'layout', 'padding', 'base');
-  border-radius: theme($package, 'layout', 'borders', 'radius', 'base');
-  box-shadow: 0px theme($package, 'layout', 'elevation', 'base', 'distance') theme($package, 'layout', 'elevation', 'base', 'blur') theme($package, 'layout', 'elevation', 'color');
-  transition: theme($package, 'elements', 'card', 'transition-time');
+  padding: $padding-base;
+  border-radius: $border-radius-base;
+  box-shadow: $elevated-1;
+  transition: $transition-base;
 
   &.interactable:hover {
-    box-shadow: 0px theme($package, 'layout', 'elevation', 'elevated', 'distance') theme($package, 'layout', 'elevation', 'elevated', 'blur') theme($package, 'layout', 'elevation', 'color');
+    box-shadow: $elevated-2;
     cursor: pointer;
   }
 
   .new-ui.new-card__expand-button {
-    transition: theme($package, 'elements', 'card', 'transition-time');
+    transition: $transition-slow;
   }
 
   &.expanded {
