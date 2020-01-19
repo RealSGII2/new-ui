@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Validator from '../../../../../utils/validate'
+  import Validator from '../../../../../utils'
   const alignments = ['left', 'right', 'space-between']
   export default {
     name: 'NewCardActions',
