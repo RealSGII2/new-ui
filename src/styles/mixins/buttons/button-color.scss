@@ -1,0 +1,17 @@
+@import './button-filled';
+@import './button-stroked';
+@import './button-text';
+
+@mixin button-color($button-color) {
+  &--text {
+    @include button-text($button-color);
+  }
+
+  &--stroked {
+    @include button-stroked($button-color);
+  }
+
+  &--filled {
+    @include button-filled($button-color);
+  }
+}

@@ -1,0 +1,221 @@
+.new-ui.new-card__header {
+  .new-card__title, .new-card__subheader {
+    margin: 0;
+  }
+
+  &.__title {
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+
+  &.__subheader {
+    opacity: .6;
+    font-size: 15px;
+    letter-spacing: .01em;
+    line-height: 20px;
+
+    + .new-ui.new-card__title {
+      margin-top: 4px;
+    }
+  }
+}
+
+.new-ui.new-card {
+  padding: $padding-base;
+  border-radius: $border-radius-base;
+  box-shadow: $elevated-1;
+  transition: $transition-base;
+
+  &.interactable:hover {
+    box-shadow: $elevated-2;
+    cursor: pointer;
+  }
+
+  .new-ui.new-card__expand-button {
+    transition: $transition-base
+  }
+
+  &.expanded {
+    .new-ui.new-card__expand-button {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.__header {
+     padding: 16px;
+     &:first-child {
+       > .new-ui.new-card__title:first-child,
+       > .new-ui.new-card__header-text > .new-ui.new-card__title:first-child {
+         margin-top: 8px;
+       }
+     }
+     &:last-child {
+       margin-bottom: 8px;
+     }
+     &.new-ui.new-card__header-flex {
+       display: flex;
+       justify-content: space-between;
+     }
+     + .new-ui.new-card__content {
+       padding-top: 0;
+     }
+     + .new-ui.new-card__actions:not(:last-child) {
+       padding: 0 8px;
+     }
+     > img {
+       border-radius: 50%;
+     }
+     > img,
+     .new-ui.new-card__avatar {
+       margin-right: 16px;
+       float: left;
+       ~ .new-ui.new-card__title {
+         font-size: 14px;
+       }
+       ~ .new-ui.new-card__title,
+       ~ .new-ui.new-card__subhead {
+         font-weight: 500;
+         line-height: 20px;
+       }
+     }
+     .new-ui.new-card__button {
+       margin: 0;
+       &:last-child {
+         margin-right: -4px;
+       }
+       + .new-button {
+         margin-left: 8px;
+       }
+     }
+     .new-ui.new-card__header-text {
+       flex: 1;
+     }
+     .new-ui.new-card__media {
+       $size: 80px;
+       width: $size;
+       height: $size;
+       margin-left: 16px;
+       flex: 0 0 $size;
+       &.new-ui.new-card__media__medium {
+         $size: 120px;
+         width: $size;
+         height: $size;
+         flex: 0 0 $size;
+       }
+       &.new-ui.new-card__media__big {
+         $size: 160px;
+         width: $size;
+         height: $size;
+         flex: 0 0 $size;
+       }
+     }
+     .new-card__content {
+       padding: 16px;
+       font-size: 14px;
+       line-height: 22px;
+       &:last-of-type {
+         padding-bottom: 24px;
+       }
+     }
+   }
+}
+
+.new-card__media-cover {
+position: relative;
+color: #fff;
+&.md-solid {
+ .new-card__area {
+   background-color: rgba(#000, .54);
+ }
+}
+&.new-text-scrim {
+ .new-card__backdrop {
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 1;
+ }
+}
+.new-card__area {
+ display: flex;
+ flex-direction: column;
+ position: absolute;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ z-index: 2;
+}
+.new-card__header {
+ display: flex;
+ flex-direction: column;
+ + .new-card__actions {
+   padding-top: 0;
+ }
+}
+.new-subhead {
+ opacity: 1;
+}
+.new-card__header,
+.new-card__actions {
+ .new-button.new-button--text {
+   color: #fff !important;
+ }
+
+ .new-button.new-button--outline {
+   color: #fff !important;
+   border-color: #fff !important;
+ }
+}
+}
+
+.new-card__actions {
+padding: 8px;
+display: flex;
+align-items: center;
+&.new-alignment--right {
+ justify-content: flex-end;
+}
+&.new-alignment--left {
+ justify-content: flex-start;
+}
+&.new-alignment--space-between {
+ justify-content: space-between;
+}
+.new-button {
+ margin: 0;
+ &:first-child {
+   margin-left: 0;
+ }
+ &:last-child {
+   margin-right: 0;
+ }
+ + .md-button {
+   margin-left: 4px;
+ }
+}
+}
+
+.new-card__area {
+position: relative;
+}
+.new-card {
+> .new-card__area:not(:last-child) {
+position: relative;
+&:after {
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  content: " ";
+}
+&:not(.new-inset):after {
+  right: 0;
+  left: 0;
+}
+&.new-inset:after {
+  right: 16px;
+  left: 16px;
+}
+}

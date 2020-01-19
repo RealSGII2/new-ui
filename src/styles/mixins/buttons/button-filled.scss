@@ -1,0 +1,13 @@
+@import './button-background';
+
+@mixin button-filled($button-color) {
+  @include button-background($button-color);
+
+  &:hover {
+    @include button-background(lighten($button-color, $color-amount));
+  }
+
+  &:active {
+    @include button-background(darken($button-color, $color-amount));
+  }
+}

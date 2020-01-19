@@ -1,0 +1,17 @@
+@import '../_theme.scss';
+
+.new-ui.elevated-1:not(.new-button--stroked):not(.new-button--text) {
+  box-shadow: $elevation-1;
+}
+
+.new-ui.elevated-2:not(.new-button--stroked):not(.new-button--text) {
+  box-shadow: $elevation-2;
+}
+
+.new-ui.elevated-3:not(.new-button--stroked):not(.new-button--text) {
+  box-shadow: $elevation-3;
+}
+
+.new-ui.elevated-4:not(.new-button--stroked):not(.new-button--text) {
+  box-shadow: $elevation-4;
+}

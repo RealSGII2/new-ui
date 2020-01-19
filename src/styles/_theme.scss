@@ -1,0 +1,54 @@
+/* Colours */
+$color-default: #00B6FF !default;
+$color-brand: #036ffc !default;
+$color-secondary: #18B4C4 !default;
+$color-state-error: #fc0303 !default;
+$color-state-success: #36C63A !default;
+$color-state-warn: #D5C100 !default;
+$color-state-info: #0044D5 !default;
+
+$border-color: #000 !default;
+
+/* Background */
+$background-base: #e1e1e1 !default;
+$background-mid-priority: #1b1c1d !default;
+$background-high-priority: #ffffff !default;
+$background-accent: #a4dfe5 !default;
+
+/* Borders */
+$border-radius-tile: 0px !default;
+$border-radius-base: 4px !default;
+$border-radius-rounded: 50px !default;
+$border-radius-oval: 100% !default;
+
+$border-width-base: 1px;
+$border-width-thick: 3px;
+
+/* Elevation */
+$elevated-1: 0px 2px 3px 1px #ccc !default;
+$elevated-2: 0px 4px 6px 2px #ccc !default;
+$elevated-3: 0px 6px 9px 3px #ccc !default;
+$elevated-4: 0px 8px 12px 4px #ccc !default;
+
+/* Padding */
+$padding-base: 10px !default;
+$padding-button: 10px 16px !default;
+$padding-dense: 4px !default;
+$padding-spaced: 20px !default;
+
+/* Typography */
+$type-header: 0 !default;
+$type-subheader: 0.54 !default;
+$type-paragraph: 0.32 !default;
+
+/* Transition Times */
+$transition-base: 0.1s !default;
+$transition-slower: 0.3s !default;
+
+/** ELEMENTS **/
+// Button
+$button-min-width: 88px !default;
+$button-all-caps: true !default;
+$button-change-color-amount: 8% !default;
+$button-transparent-amount--hover: 0.9 !default;
+$button-transparent-amount--active: 0.7 !default;

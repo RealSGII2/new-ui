@@ -9,7 +9,3 @@
     name: 'NewCardMediaActions'
   }
 </script>
-
-<style lang="scss">
-  
-</style>
