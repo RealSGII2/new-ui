@@ -15,7 +15,7 @@ $transparent-amount--active: 0.7;
   @return lightness($color) > 65;
 }
 
-@mixin md-image-aspect-ratio($width, $height) {
+@mixin media-image-aspect-ratio($width, $height) {
     overflow: hidden;
     &:before{
       width: 100%;
