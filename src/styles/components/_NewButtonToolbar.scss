@@ -1,3 +1,5 @@
+@import '../_theme.scss'
+
 .new-ui.new-button-toolbar {
   .new-ui.new-button {
     margin: 0px !important;
@@ -20,11 +22,11 @@
   &.pill {
     .new-ui.new-button {
       &:first-child {
-        border-radius: $button-radius-base 0 0 $button-radius-base !important;
+        border-radius: $button-radius-rounded 0 0 $button-radius-rounded !important;
       }
 
       &:last-child {
-        border-radius: 0 $button-radius-base $button-radius-base 0 !important;
+        border-radius: 0 $button-radius-rounded $button-radius-rounded 0 !important;
       }
     }
   }
