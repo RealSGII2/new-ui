@@ -529,9 +529,22 @@ $transparent-amount--active: 0.7;
     width: 100%;
     padding: 14px;
     box-shadow: 0px theme($package, 'layout', 'elevation', 'base', 'distance') theme($package, 'layout', 'elevation', 'base', 'blur') 3px theme($package, 'layout', 'elevation', 'color');
+    transition: 0.3s;
 
-    &.--fixed {
+    &--fixed {
       position: fixed;
+    }
+
+    &--collaped {
+      position: fixed;
+      margin-left: 20px;
+      border-radius: 0 0 theme($package, 'layout', 'borders', 'radius', 'base') theme($package, 'layout', 'borders', 'radius', 'base');
+
+      .new-ui.new-appbar__actions {
+        display: none;
+      }
+
+
     }
   }
 
