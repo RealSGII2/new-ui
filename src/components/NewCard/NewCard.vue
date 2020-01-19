@@ -11,8 +11,10 @@
       interactable: Boolean
     },
     data: () => {
-      provided: {
-        expanded: false
+      return {
+        provided: {
+          expanded: false
+        }
       }
     },
     provide: () => {

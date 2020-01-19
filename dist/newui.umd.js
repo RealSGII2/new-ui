@@ -467,12 +467,12 @@ const NewButtonToolbar_exported = Vue => {
 
 /* harmony default export */ var components_NewButtonToolbar = (NewButtonToolbar_exported);
 
-// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6607ec1e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewCard/NewCard.vue?vue&type=template&id=1daea06d&
-var NewCardvue_type_template_id_1daea06d_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"new-ui new-card",class:_vm.classes},[_vm._t("default")],2)}
-var NewCardvue_type_template_id_1daea06d_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6607ec1e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewCard/NewCard.vue?vue&type=template&id=6766152a&
+var NewCardvue_type_template_id_6766152a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"new-ui new-card",class:_vm.classes},[_vm._t("default")],2)}
+var NewCardvue_type_template_id_6766152a_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NewCard/NewCard.vue?vue&type=template&id=1daea06d&
+// CONCATENATED MODULE: ./src/components/NewCard/NewCard.vue?vue&type=template&id=6766152a&
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewCard/NewCard.vue?vue&type=script&lang=js&
 //
@@ -488,8 +488,10 @@ var NewCardvue_type_template_id_1daea06d_staticRenderFns = []
     interactable: Boolean
   },
   data: () => {
-    provided: {
-      expanded: false
+    return {
+      provided: {
+        expanded: false
+      }
     }
   },
   provide: () => {
@@ -521,8 +523,8 @@ var NewCardvue_type_style_index_0_lang_scss_ = __webpack_require__("c02c");
 
 var NewCard_component = normalizeComponent(
   NewCard_NewCardvue_type_script_lang_js_,
-  NewCardvue_type_template_id_1daea06d_render,
-  NewCardvue_type_template_id_1daea06d_staticRenderFns,
+  NewCardvue_type_template_id_6766152a_render,
+  NewCardvue_type_template_id_6766152a_staticRenderFns,
   false,
   null,
   null,
@@ -613,12 +615,12 @@ var NewCardHeader_component = normalizeComponent(
 )
 
 /* harmony default export */ var NewCardHeader = (NewCardHeader_component.exports);
-// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6607ec1e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewCard/parts/NewCardHeader/NewCardHeaderText.vue?vue&type=template&id=64e48d67&
-var NewCardHeaderTextvue_type_template_id_64e48d67_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"new-ui new-card__header-text"},[_vm._t("default")],2)}
-var NewCardHeaderTextvue_type_template_id_64e48d67_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6607ec1e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewCard/parts/NewCardHeader/NewCardHeaderText.vue?vue&type=template&id=7473d840&
+var NewCardHeaderTextvue_type_template_id_7473d840_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"new-ui new-card__header-text"},[_vm._t("default")],2)}
+var NewCardHeaderTextvue_type_template_id_7473d840_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NewCard/parts/NewCardHeader/NewCardHeaderText.vue?vue&type=template&id=64e48d67&
+// CONCATENATED MODULE: ./src/components/NewCard/parts/NewCardHeader/NewCardHeaderText.vue?vue&type=template&id=7473d840&
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewCard/parts/NewCardHeader/NewCardHeaderText.vue?vue&type=script&lang=js&
 //
@@ -630,9 +632,11 @@ var NewCardHeaderTextvue_type_template_id_64e48d67_staticRenderFns = []
 
 /* harmony default export */ var NewCardHeaderTextvue_type_script_lang_js_ = ({
   name: 'NewCardHeaderText',
-  data: () => ({
-    parentClasses: null
-  }),
+  data: () => {
+    return {
+      parentClasses: null
+    }
+  },
   mounted () {
     this.parentClasses = this.$parent.$el.classList
     if (this.parentClasses.contains('new-card__header')) {
@@ -656,8 +660,8 @@ var NewCardHeaderTextvue_type_template_id_64e48d67_staticRenderFns = []
 
 var NewCardHeaderText_component = normalizeComponent(
   NewCardHeader_NewCardHeaderTextvue_type_script_lang_js_,
-  NewCardHeaderTextvue_type_template_id_64e48d67_render,
-  NewCardHeaderTextvue_type_template_id_64e48d67_staticRenderFns,
+  NewCardHeaderTextvue_type_template_id_7473d840_render,
+  NewCardHeaderTextvue_type_template_id_7473d840_staticRenderFns,
   false,
   null,
   null,
