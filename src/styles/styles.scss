@@ -15,6 +15,16 @@ $transparent-amount--active: 0.7;
   @return lightness($color) > 65;
 }
 
+@mixin color-background($color) {
+  background-color: $color;
+
+  @if (light($color)) {
+    color: #000000;
+  } @else {
+    color: #ffffff;
+  }
+}
+
 @mixin media-image-aspect-ratio($width, $height) {
     overflow: hidden;
     &:before{
@@ -165,11 +175,11 @@ $transparent-amount--active: 0.7;
      }
 
      .new-ui.elevated:not(.new-button--stroked):not(.new-button--text) {
-       box-shadow: 0px theme($package, 'layout', 'elevation', 'base', 'distance') theme($package, 'layout', 'elevation', 'base', 'blur') theme($package, 'layout', 'elevation', 'color');
+       box-shadow: 0px theme($package, 'layout', 'elevation', 'base', 'distance') theme($package, 'layout', 'elevation', 'base', 'blur') 1px theme($package, 'layout', 'elevation', 'color');
      }
 
      .new-ui.elevated-high:not(.new-button--stroked):not(.new-button--text) {
-       box-shadow: 0px theme($package, 'layout', 'elevation', 'elevated', 'distance') theme($package, 'layout', 'elevation', 'elevated', 'blur') theme($package, 'layout', 'elevation', 'color');
+       box-shadow: 0px theme($package, 'layout', 'elevation', 'elevated', 'distance') theme($package, 'layout', 'elevation', 'elevated', 'blur') 1px theme($package, 'layout', 'elevation', 'color');
      }
 
      .new-ui.new-button {
@@ -256,6 +266,29 @@ $transparent-amount--active: 0.7;
        }
      }
 
+     .new-ui.new-card__header {
+       .new-card__title, .new-card__subheader {
+         margin: 0;
+       }
+
+       &.__title {
+         font-size: 20px;
+         letter-spacing: 0;
+         line-height: 28px;
+       }
+
+       &.__subheader {
+         opacity: .6;
+         font-size: 15px;
+         letter-spacing: .01em;
+         line-height: 20px;
+
+         + .new-ui.new-card__title {
+           margin-top: 4px;
+         }
+       }
+     }
+
      .new-ui.new-card {
        padding: theme($package, 'layout', 'padding', 'base');
        border-radius: theme($package, 'layout', 'borders', 'radius', 'base');
@@ -275,27 +308,6 @@ $transparent-amount--active: 0.7;
          .new-ui.new-card__expand-button {
            transform: rotate(180deg);
 
-         }
-       }
-
-       &.__title, &.__subheader {
-         margin: 0;
-       }
-
-       &.__title {
-         font-size: 20px;
-         letter-spacing: 0;
-         line-height: 28px;
-       }
-
-       &.__subheader {
-         opacity: .6;
-         font-size: 15px;
-         letter-spacing: .01em;
-         line-height: 20px;
-
-         + .new-ui.new-card__title {
-           margin-top: 4px;
          }
        }
 
@@ -477,6 +489,85 @@ $transparent-amount--active: 0.7;
      }
    }
  }
+
+  .vue-tablist {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    border-bottom: 1px solid #e2e2e2;
+  }
+
+  .vue-tab {
+    padding: 5px 10px;
+    cursor: pointer;
+    user-select: none;
+
+    border-radius: 4px;
+
+    position: relative;
+    bottom: -1px;
+
+    &:after {
+      width: 80%;
+      background-color: theme($package, 'colors', 'brand');
+      border-radius: 5px;
+      height: 4px;
+    }
+  }
+
+  .vue-tab[aria-selected="true"] {
+    border-color: #e2e2e2;
+    border-bottom-color: transparent;
+  }
+
+  .vue-tab[aria-disabled="true"] {
+    cursor: not-allowed;
+    color: #999;
+  }
+
+  .new-ui.new-appbar {
+    width: 100%;
+    padding: 14px;
+    box-shadow: 0px theme($package, 'layout', 'elevation', 'base', 'distance') theme($package, 'layout', 'elevation', 'base', 'blur') 3px theme($package, 'layout', 'elevation', 'color');
+
+    &.--fixed {
+      position: fixed;
+    }
+  }
+
+  .new-ui.new-appbar__actions {
+    float: right;
+  }
+
+  .new-ui.new-appbar--state {
+    &.-default {
+      @include color-background(theme($package, 'colors', 'default'));
+    }
+
+    &.-brand {
+      @include color-background(theme($package, 'colors', 'brand'));
+    }
+
+    &.-accent {
+      @include color-background(theme($package, 'colors', 'accent'));
+    }
+
+    &.-error {
+      @include color-background(theme($package, 'colors', 'states', 'error'));
+    }
+
+    &.-warn {
+      @include color-background(theme($package, 'colors', 'states', 'warn'));
+    }
+
+    &.-success {
+      @include color-background(theme($package, 'colors', 'states', 'success'));
+    }
+
+    &.-info {
+      @include color-background(theme($package, 'colors', 'states', 'info'));
+    }
+  }
 }
 
 .new-ui.new-app.new-app--themeable.new-app--use_styles {}

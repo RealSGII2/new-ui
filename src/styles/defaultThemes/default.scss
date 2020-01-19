@@ -62,14 +62,14 @@ $theme-package: (
     ),
     /* also known as Shadow */
     elevation: (
-      color: #000000,
+      color: #888,
       base: (
         blur: 8px,
-        distance: 3px
+        distance: 2px
       ),
       elevated: (
         blur: 16px,
-        distance: 6px
+        distance: 4px
       )
     ),
     padding: (
