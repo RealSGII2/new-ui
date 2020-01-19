@@ -44,6 +44,6 @@
   }
 
   &--info {
-    @include button-color($button-state-info);
+    @include button-color($color-state-info);
   }
 }

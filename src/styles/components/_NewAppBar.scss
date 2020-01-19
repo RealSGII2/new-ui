@@ -27,7 +27,7 @@
     max-width: 20%;
     position: fixed;
     margin-left: 20px;
-    border-radius: 0 0 theme($package, 'layout', 'borders', 'radius', 'base') theme($package, 'layout', 'borders', 'radius', 'base');
+    border-radius: 0 0 $border-radius-base $border-radius-base;
 
     .new-ui.new-appbar__actions {
       display: none;
@@ -75,6 +75,6 @@
   }
 
   &-info {
-    @include color-background($button-state-info);
+    @include color-background($color-state-info);
   }
 }
