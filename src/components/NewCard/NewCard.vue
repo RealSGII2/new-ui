@@ -10,7 +10,7 @@
     props: {
       interactable: Boolean
     },
-    data: () => {
+    data () {
       return {
         provided: {
           expanded: false
@@ -21,7 +21,7 @@
       card: this.provided
     },
     computed: {
-      classes: () => {
+      classes () {
         return {
           "expanded": this.provided.expanded,
           "interactable": this.interactable
