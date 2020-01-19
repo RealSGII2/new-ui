@@ -22,23 +22,24 @@
 }
 
 .new-ui.new-card {
-  padding: $padding-base;
-  border-radius: $border-radius-base;
-  box-shadow: $elevated-1;
-  transition: $transition-base;
+  padding: theme($package, 'layout', 'padding', 'base');
+  border-radius: theme($package, 'layout', 'borders', 'radius', 'base');
+  box-shadow: 0px theme($package, 'layout', 'elevation', 'base', 'distance') theme($package, 'layout', 'elevation', 'base', 'blur') theme($package, 'layout', 'elevation', 'color');
+  transition: theme($package, 'elements', 'card', 'transition-time');
 
   &.interactable:hover {
-    box-shadow: $elevated-2;
+    box-shadow: 0px theme($package, 'layout', 'elevation', 'elevated', 'distance') theme($package, 'layout', 'elevation', 'elevated', 'blur') theme($package, 'layout', 'elevation', 'color');
     cursor: pointer;
   }
 
   .new-ui.new-card__expand-button {
-    transition: $transition-base
+    transition: theme($package, 'elements', 'card', 'transition-time');
   }
 
   &.expanded {
     .new-ui.new-card__expand-button {
       transform: rotate(180deg);
+
     }
   }
 
@@ -217,4 +218,6 @@ position: relative;
 &.new-inset:after {
   right: 16px;
   left: 16px;
+}
+}
 }
