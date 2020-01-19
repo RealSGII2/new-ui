@@ -1,5 +1,5 @@
-@import './base';
-@import './components';
-@import './functions';
-@import './mixins';
-@import './_theme';
+@import './base/index.scss';
+@import './components/index.scss';
+@import './functions/index.scss';
+@import './mixins/index.scss';
+@import './_theme.scss';
