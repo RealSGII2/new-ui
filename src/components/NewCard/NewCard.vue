@@ -17,7 +17,7 @@
         }
       }
     },
-    provide: {
+    provide () {
       card: this.provided
     },
     computed: {
