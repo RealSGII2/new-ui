@@ -2,7 +2,7 @@
 @import '../mixins/buttons/button-color';
 
 .new-ui.new-button {
-  border-radius: $button-border-radius;
+  border-radius: $border-radius-base;
   padding: $padding-button;
   border-width: $border-width-base;
   border-style: solid;
