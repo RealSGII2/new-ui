@@ -5,14 +5,13 @@
 </template>
 
 <script>
-  import Validator from '../../../../../utils'
   export default {
     name: 'NewCardMedia',
     props: {
       mdRatio: {
         type: String,
-        ...Validator('card-media-ratio', [
-          '16-9',
+        validator: function (value) {
+          return ['16-9',
           '16/9',
           '16:9',
           '4-3',
@@ -20,8 +19,8 @@
           '4:3',
           '1-1',
           '1/1',
-          '1:1'
-        ])
+          '1:1'].indexOf(value) !== -1
+        }
       },
       mediaMedium: Boolean,
       mediaBig: Boolean

@@ -5,7 +5,6 @@
 </template>
 
 <script>
-  import Validator from '../../../../../utils'
   const alignments = ['left', 'right', 'space-between']
   export default {
     name: 'NewCardActions',
@@ -13,7 +12,9 @@
       mdAlignment: {
         type: String,
         default: 'right',
-        ...Validator('new-alignment', alignments)
+        validator: function (value) {
+          return ['left', 'right', 'space-between'].indexOf(value) !== -1
+        }
       }
     }
   }
