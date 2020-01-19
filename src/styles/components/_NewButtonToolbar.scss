@@ -10,11 +10,11 @@
   &:not(.pill) {
     .new-ui.new-button {
       &:first-child {
-        border-radius: $button-radius-base 0 0 $button-radius-base !important;
+        border-radius: $border-radius-base 0 0 $border-radius-base !important;
       }
 
       &:last-child {
-        border-radius: 0 $button-radius-base $button-radius-base 0 !important;
+        border-radius: 0 $border-radius-base $border-radius-base 0 !important;
       }
     }
   }
@@ -22,11 +22,11 @@
   &.pill {
     .new-ui.new-button {
       &:first-child {
-        border-radius: $button-radius-rounded 0 0 $button-radius-rounded !important;
+        border-radius: $border-radius-rounded 0 0 $border-radius-rounded !important;
       }
 
       &:last-child {
-        border-radius: 0 $button-radius-rounded $button-radius-rounded 0 !important;
+        border-radius: 0 $border-radius-rounded $border-radius-rounded 0 !important;
       }
     }
   }
