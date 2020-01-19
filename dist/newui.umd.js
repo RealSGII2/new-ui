@@ -467,12 +467,12 @@ const NewButtonToolbar_exported = Vue => {
 
 /* harmony default export */ var components_NewButtonToolbar = (NewButtonToolbar_exported);
 
-// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6607ec1e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewCard/NewCard.vue?vue&type=template&id=77ced716&
-var NewCardvue_type_template_id_77ced716_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"new-ui new-card",class:_vm.classes},[_vm._t("default")],2)}
-var NewCardvue_type_template_id_77ced716_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"6607ec1e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewCard/NewCard.vue?vue&type=template&id=4b7dfa90&
+var NewCardvue_type_template_id_4b7dfa90_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"new-ui new-card",class:_vm.classes},[_vm._t("default")],2)}
+var NewCardvue_type_template_id_4b7dfa90_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NewCard/NewCard.vue?vue&type=template&id=77ced716&
+// CONCATENATED MODULE: ./src/components/NewCard/NewCard.vue?vue&type=template&id=4b7dfa90&
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewCard/NewCard.vue?vue&type=script&lang=js&
 //
@@ -483,7 +483,7 @@ var NewCardvue_type_template_id_77ced716_staticRenderFns = []
 //
 
 /* harmony default export */ var NewCardvue_type_script_lang_js_ = ({
-  name: 'NewButton',
+  name: 'NewCard',
   props: {
     interactable: Boolean
   },
@@ -523,8 +523,8 @@ var NewCardvue_type_style_index_0_lang_scss_ = __webpack_require__("c02c");
 
 var NewCard_component = normalizeComponent(
   NewCard_NewCardvue_type_script_lang_js_,
-  NewCardvue_type_template_id_77ced716_render,
-  NewCardvue_type_template_id_77ced716_staticRenderFns,
+  NewCardvue_type_template_id_4b7dfa90_render,
+  NewCardvue_type_template_id_4b7dfa90_staticRenderFns,
   false,
   null,
   null,
