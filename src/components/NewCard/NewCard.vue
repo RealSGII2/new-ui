@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'NewButton',
+    name: 'NewCard',
     props: {
       interactable: Boolean
     },
