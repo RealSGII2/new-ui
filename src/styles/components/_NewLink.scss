@@ -1,46 +1,52 @@
 @import '../_theme.scss';
 
+@mixin a-link($color) {
+  &:link, &:visited {
+    color: $color;
+    text-decoration: none;
+    border-bottom-color: transparent;
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 1px;
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: darken($color, 10%);
+    border-bottom-color: darken($color, 10%);
+  }
+}
+
 .new-ui.new-link {
-  $color: null;
-  text-decoration: none;
-  border-bottom-color: transparent;
-  border-style: solid;
-  border-bottom-width: 1px;
+  font-family: 'Roboto', sans-serif;
+  transition: $transition-base;
 
   // Set color
   &--default {
-    $color: $color-default !global;
+    @include a-link($color-default);
   }
 
   &--brand {
-    $color: $color-brand !global;
+    @include a-link($color-brand);
   }
 
   &--secondary {
-    $color: $color-secondary !global;
+    @include a-link($color-secondary);
   }
 
   &--error {
-    $color: $color-state-error !global;
+    @include a-link($color-state-error);
   }
 
   &--warn {
-    $color: $color-state-warn !global;
+    @include a-link($color-state-warn);
   }
 
   &--success {
-    $color: $color-state-success !global;
+    @include a-link($color-state-success);
   }
 
   &--info {
-    $color: $color-state-info !global;
+    @include a-link($color-state-info);
   }
-
-  color: $color;
-
-  &:hover {
-    border-bottom-color: $color;
-  }
-
-  $color: null;
 }

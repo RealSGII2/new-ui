@@ -1069,12 +1069,12 @@ const NewCard_exported = Vue => {
 
 /* harmony default export */ var components_NewCard = (NewCard_exported);
 
-// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"71d1dc0e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewLink/NewLink.vue?vue&type=template&id=54cd3b4a&
-var NewLinkvue_type_template_id_54cd3b4a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('a',{staticClass:"new-ui new-link"},[_vm._t("default")],2)}
-var NewLinkvue_type_template_id_54cd3b4a_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"71d1dc0e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewLink/NewLink.vue?vue&type=template&id=f69820dc&
+var NewLinkvue_type_template_id_f69820dc_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('a',{staticClass:"new-ui new-link"},[_vm._t("default")],2)}
+var NewLinkvue_type_template_id_f69820dc_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NewLink/NewLink.vue?vue&type=template&id=54cd3b4a&
+// CONCATENATED MODULE: ./src/components/NewLink/NewLink.vue?vue&type=template&id=f69820dc&
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewLink/NewLink.vue?vue&type=script&lang=js&
 //
@@ -1085,7 +1085,7 @@ var NewLinkvue_type_template_id_54cd3b4a_staticRenderFns = []
 //
 
 /* harmony default export */ var NewLinkvue_type_script_lang_js_ = ({
-  name: 'NewButton',
+  name: 'NewLink',
   props: {
     state: {
       type: String,
@@ -1115,8 +1115,8 @@ var NewLinkvue_type_template_id_54cd3b4a_staticRenderFns = []
 
 var NewLink_component = normalizeComponent(
   NewLink_NewLinkvue_type_script_lang_js_,
-  NewLinkvue_type_template_id_54cd3b4a_render,
-  NewLinkvue_type_template_id_54cd3b4a_staticRenderFns,
+  NewLinkvue_type_template_id_f69820dc_render,
+  NewLinkvue_type_template_id_f69820dc_staticRenderFns,
   false,
   null,
   null,
