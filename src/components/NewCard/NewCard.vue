@@ -23,7 +23,6 @@
     computed: {
       classes () {
         return {
-          "expanded": this.provided.expanded,
           "interactable": this.interactable
         }
       }

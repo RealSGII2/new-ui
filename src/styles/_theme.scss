@@ -33,13 +33,18 @@ $elevated-4: 0px 8px 12px 4px #ccc !default;
 /* Padding */
 $padding-base: 10px !default;
 $padding-button: 10px 16px !default;
+$padding-button-dense: 6px 10px !default;
 $padding-dense: 4px !default;
 $padding-spaced: 20px !default;
 
 /* Typography */
-$type-header: 0 !default;
+$type-header: 1 !default;
 $type-subheader: 0.54 !default;
-$type-paragraph: 0.32 !default;
+$type-paragraph: 0.72 !default;
+
+$type-font-size-header: 24px !default;
+$type-font-size-subheader: 14px !default;
+$type-font-size-paragraph: 16px !default;
 
 /* Transition Times */
 $transition-base: 0.1s !default;

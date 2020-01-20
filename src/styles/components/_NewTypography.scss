@@ -1,0 +1,30 @@
+@import '../_theme.scss';
+
+.new-ui.new-paragraph {
+  font-size: $type-font-size-paragraph;
+  opacity: $type-paragraph;
+  line-height: 16px;
+}
+
+.new-ui.new-head {
+  font-weight: 400;
+  opacity: $type-header;
+}
+
+.new-ui.new-subhead {
+  font-weight: 400;
+  opacity: $type-subheader;
+  font-size: $type-font-size-subheader;
+  letter-spacing: .01em;
+  line-height: 20px;
+
+  + .new-head {
+     margin-top: 4px;
+  }
+}
+
+.new-head {
+  font-size: $type-font-size-header;
+  letter-spacing: 0;
+  line-height: 32px;
+}

@@ -47,3 +47,8 @@
     @include button-color($color-state-info);
   }
 }
+
+.new-ui.new-button.new-button--dense {
+  padding: $padding-button-dense;
+  min-width: 0;
+}
