@@ -9,7 +9,7 @@ const exported = Vue => {
   Vue.component(NewCardContent.name, NewCardContent),
   Vue.component(NewCardContentSection.name, NewCardContentSection),
   Vue.component(NewCardHeader.name, NewCardHeader),
-  Vue.component(NewCardImage.name, NewCardImage),
+  Vue.component(NewCardImage.name, NewCardImage)
 }
 
 export default exported
