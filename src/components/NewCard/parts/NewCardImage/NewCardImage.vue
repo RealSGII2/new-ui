@@ -1,6 +1,6 @@
 <template>
   <div class="new-ui new-card__image">
-    <img :src="source"></img>
+    <img :src="source" class="new-ui new-image new-image--tile"></img>
   </div>
 </template>
 
