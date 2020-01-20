@@ -756,6 +756,10 @@ var NewCardImage_component = normalizeComponent(
 
 const NewCard_exported = Vue => {
   Vue.component(NewCard.name, NewCard)
+  Vue.component(parts_NewCardContent.name, parts_NewCardContent)
+  Vue.component(parts_NewCardContentSection.name, parts_NewCardContentSection)
+  Vue.component(parts_NewCardHeader.name, parts_NewCardHeader)
+  Vue.component(parts_NewCardImage.name, parts_NewCardImage)
 }
 
 /* harmony default export */ var components_NewCard = (NewCard_exported);
