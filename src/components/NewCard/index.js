@@ -1,4 +1,4 @@
-import NewCard from './parts/NewCard'
+import NewCard from './NewCard'
 import NewCardContent from './parts/NewCardContent'
 import NewCardContentSection from './parts/NewCardContentSection'
 import NewCardHeader from './parts/NewCardHeader'
