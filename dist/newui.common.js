@@ -693,12 +693,12 @@ var NewCardHeader_component = normalizeComponent(
   NewCardHeader: NewCardHeader
 });
 
-// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"71d1dc0e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewCard/parts/NewCardImage/NewCardImage.vue?vue&type=template&id=418d9ab5&
-var NewCardImagevue_type_template_id_418d9ab5_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"new-ui new-card__image"},[_c('img',{attrs:{"src":_vm.source}})])}
-var NewCardImagevue_type_template_id_418d9ab5_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"71d1dc0e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewCard/parts/NewCardImage/NewCardImage.vue?vue&type=template&id=8ef08008&
+var NewCardImagevue_type_template_id_8ef08008_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"new-ui new-card__image"},[_c('img',{attrs:{"src":_vm.source}})])}
+var NewCardImagevue_type_template_id_8ef08008_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/NewCard/parts/NewCardImage/NewCardImage.vue?vue&type=template&id=418d9ab5&
+// CONCATENATED MODULE: ./src/components/NewCard/parts/NewCardImage/NewCardImage.vue?vue&type=template&id=8ef08008&
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewCard/parts/NewCardImage/NewCardImage.vue?vue&type=script&lang=js&
 //
@@ -711,7 +711,7 @@ var NewCardImagevue_type_template_id_418d9ab5_staticRenderFns = []
 /* harmony default export */ var NewCardImagevue_type_script_lang_js_ = ({
   name: 'NewCardImage',
   props: {
-    src: {
+    source: {
       type: String,
       required: true
     }
@@ -730,8 +730,8 @@ var NewCardImagevue_type_template_id_418d9ab5_staticRenderFns = []
 
 var NewCardImage_component = normalizeComponent(
   NewCardImage_NewCardImagevue_type_script_lang_js_,
-  NewCardImagevue_type_template_id_418d9ab5_render,
-  NewCardImagevue_type_template_id_418d9ab5_staticRenderFns,
+  NewCardImagevue_type_template_id_8ef08008_render,
+  NewCardImagevue_type_template_id_8ef08008_staticRenderFns,
   false,
   null,
   null,
@@ -756,7 +756,7 @@ var NewCardImage_component = normalizeComponent(
 
 const NewCard_exported = Vue => {
   Vue.component(NewCard.name, NewCard),
-  //Vue.component(NewCardContent.name, NewCardContent),
+  Vue.component(parts_NewCardContent.name, parts_NewCardContent),
   Vue.component(parts_NewCardContentSection.name, parts_NewCardContentSection),
   Vue.component(parts_NewCardHeader.name, parts_NewCardHeader),
   Vue.component(parts_NewCardImage.name, parts_NewCardImage)
