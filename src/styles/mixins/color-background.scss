@@ -4,8 +4,8 @@
   background-color: $color;
 
   @if (light($color)) {
-    color: #000000;
+    color: #000000 !important;
   } @else {
-    color: #ffffff;
+    color: #ffffff !important;
   }
 }
