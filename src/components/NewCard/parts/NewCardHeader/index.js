@@ -1,5 +1,5 @@
 import NewCardHeader from './NewCardHeader';
 
-export {
+export default {
   NewCardHeader
 }

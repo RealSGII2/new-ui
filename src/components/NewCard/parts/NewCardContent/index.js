@@ -1,5 +1,5 @@
 import NewCardContent from './NewCardContent';
 
-export {
+export default {
   NewCardContent
 }

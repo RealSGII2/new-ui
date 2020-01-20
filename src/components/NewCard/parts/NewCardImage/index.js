@@ -1,5 +1,5 @@
 import NewCardImage from './NewCardImage';
 
-export {
+export default {
   NewCardImage
 }

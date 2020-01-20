@@ -1,5 +1,5 @@
 import NewCardContentSection from './NewCardContentSection';
 
-export {
+export default {
   NewCardContentSection
 }
