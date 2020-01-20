@@ -1,8 +1,8 @@
-import NewCard from './NewCard'
-import NewCardContent from './NewCardContent'
-import NewCardContentSection from './NewCardContentSection'
-import NewCardHeader from './NewCardHeader'
-import NewCardImage from './NewCardImage'
+import NewCard from './parts/NewCard'
+import NewCardContent from './parts/NewCardContent'
+import NewCardContentSection from './parts/NewCardContentSection'
+import NewCardHeader from './parts/NewCardHeader'
+import NewCardImage from './parts/NewCardImage'
 
 const exported = Vue => {
   Vue.component(NewCard.name, NewCard),
