@@ -8,7 +8,7 @@
   export default {
     name: 'NewCardImage',
     props: {
-      src: {
+      source: {
         type: String,
         required: true
       }
