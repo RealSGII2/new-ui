@@ -30,7 +30,7 @@
         type: String,
         default: 'default',
         validator: function (value) {
-          return ['info', 'success', 'warn', 'error', 'default', 'accent', 'brand'].indexOf(value) !== -1
+          return ['info', 'success', 'warn', 'error', 'default', 'secondary', 'brand'].indexOf(value) !== -1
         }
       }
     },

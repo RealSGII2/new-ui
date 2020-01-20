@@ -1,0 +1,46 @@
+@import '../_theme.scss';
+
+.new-ui.new-link {
+  $color: null
+  text-decoration: none;
+  border-bottom-color: transparent;
+  border-style: solid;
+  border-bottom-width: 1px;
+
+  // Set color
+  &--default {
+    $color: $color-default !global;
+  }
+
+  &--brand {
+    $color: $color-brand !global;
+  }
+
+  &--secondary {
+    $color: $color-secondary !global;
+  }
+
+  &--error {
+    $color: $color-state-error !global;
+  }
+
+  &--warn {
+    $color: $color-state-warn !global;
+  }
+
+  &--success {
+    $color: $color-state-success !global;
+  }
+
+  &--info {
+    $color: $color-state-info !global;
+  }
+
+  color: $color;
+
+  &:hover {
+    border-bottom-color: $color;
+  }
+
+  $color: null;
+}
