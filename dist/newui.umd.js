@@ -599,13 +599,6 @@ var NewCardContent_component = normalizeComponent(
 )
 
 /* harmony default export */ var NewCardContent = (NewCardContent_component.exports);
-// CONCATENATED MODULE: ./src/components/NewCard/parts/NewCardContent/index.js
-
-
-/* harmony default export */ var parts_NewCardContent = ({
-  NewCardContent: NewCardContent
-});
-
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"71d1dc0e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewCard/parts/NewCardContentSection/NewCardContentSection.vue?vue&type=template&id=530be164&
 var NewCardContentSectionvue_type_template_id_530be164_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"new-ui new-card__content-section"},[_vm._t("default")],2)}
 var NewCardContentSectionvue_type_template_id_530be164_staticRenderFns = []
@@ -647,13 +640,6 @@ var NewCardContentSection_component = normalizeComponent(
 )
 
 /* harmony default export */ var NewCardContentSection = (NewCardContentSection_component.exports);
-// CONCATENATED MODULE: ./src/components/NewCard/parts/NewCardContentSection/index.js
-
-
-/* harmony default export */ var parts_NewCardContentSection = ({
-  NewCardContentSection: NewCardContentSection
-});
-
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"71d1dc0e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewCard/parts/NewCardHeader/NewCardHeader.vue?vue&type=template&id=6261688e&
 var NewCardHeadervue_type_template_id_6261688e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"new-ui new-card__header"},[_vm._t("default")],2)}
 var NewCardHeadervue_type_template_id_6261688e_staticRenderFns = []
@@ -695,13 +681,6 @@ var NewCardHeader_component = normalizeComponent(
 )
 
 /* harmony default export */ var NewCardHeader = (NewCardHeader_component.exports);
-// CONCATENATED MODULE: ./src/components/NewCard/parts/NewCardHeader/index.js
-
-
-/* harmony default export */ var parts_NewCardHeader = ({
-  NewCardHeader: NewCardHeader
-});
-
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"71d1dc0e-vue-loader-template"}!./node_modules/@vue/cli-service/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader/lib??vue-loader-options!./src/components/NewCard/parts/NewCardImage/NewCardImage.vue?vue&type=template&id=8ef08008&
 var NewCardImagevue_type_template_id_8ef08008_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"new-ui new-card__image"},[_c('img',{attrs:{"src":_vm.source}})])}
 var NewCardImagevue_type_template_id_8ef08008_staticRenderFns = []
@@ -749,13 +728,6 @@ var NewCardImage_component = normalizeComponent(
 )
 
 /* harmony default export */ var NewCardImage = (NewCardImage_component.exports);
-// CONCATENATED MODULE: ./src/components/NewCard/parts/NewCardImage/index.js
-
-
-/* harmony default export */ var parts_NewCardImage = ({
-  NewCardImage: NewCardImage
-});
-
 // CONCATENATED MODULE: ./src/components/NewCard/index.js
 
 
@@ -765,10 +737,10 @@ var NewCardImage_component = normalizeComponent(
 
 const NewCard_exported = Vue => {
   Vue.component(NewCard.name, NewCard)
-  Vue.component(parts_NewCardContent.name, parts_NewCardContent)
-  Vue.component(parts_NewCardContentSection.name, parts_NewCardContentSection)
-  Vue.component(parts_NewCardHeader.name, parts_NewCardHeader)
-  Vue.component(parts_NewCardImage.name, parts_NewCardImage)
+  Vue.component(NewCardContent.name, NewCardContent)
+  Vue.component(NewCardContentSection.name, NewCardContentSection)
+  Vue.component(NewCardHeader.name, NewCardHeader)
+  Vue.component(NewCardImage.name, NewCardImage)
 }
 
 /* harmony default export */ var components_NewCard = (NewCard_exported);

@@ -1,5 +1,5 @@
 <template>
-  <a class="new-ui new-link">
+  <a class="new-ui new-link" :class="class">
     <slot/>
   </a>
 </template>
