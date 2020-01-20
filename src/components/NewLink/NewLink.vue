@@ -1,5 +1,5 @@
 <template>
-  <a class="new-ui new-link" :class="class">
+  <a class="new-ui new-link" :class="[linkClass]">
     <slot/>
   </a>
 </template>
@@ -17,7 +17,7 @@
       }
     },
     computed: {
-      class: function () {
+      linkClass: function () {
         let returned = `new-link--${this.state}`
         return returned
       }
