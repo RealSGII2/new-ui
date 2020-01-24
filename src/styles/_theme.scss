@@ -6,6 +6,7 @@ $color-state-error: #fc0303 !default;
 $color-state-success: #36C63A !default;
 $color-state-warn: #D5C100 !default;
 $color-state-info: #0044D5 !default;
+$color-disabled: #EAEAEA !default;
 
 $border-color: #000 !default;
 
@@ -40,11 +41,19 @@ $padding-spaced: 20px !default;
 /* Typography */
 $type-header: 1 !default;
 $type-subheader: 0.54 !default;
-$type-paragraph: 0.72 !default;
+$type-paragraph: 0.8 !default;
 
 $type-font-size-header: 24px !default;
 $type-font-size-subheader: 14px !default;
 $type-font-size-paragraph: 16px !default;
+
+$type-textbox: #000000 !default;
+
+$type-code-background: #ccc;
+$type-code-color: #dd0000;
+
+$type-keycode-background: #111;
+$type-keycode-color: #fff;
 
 /* Transition Times */
 $transition-base: 0.1s !default;
@@ -57,3 +66,8 @@ $button-all-caps: true !default;
 $button-change-color-amount: 8% !default;
 $button-transparent-amount--hover: 0.9 !default;
 $button-transparent-amount--active: 0.7 !default;
+
+// Checkbox and Radio buttons
+$cr-background-color: #ccc;
+$cr-background: 0.8 !default;
+$cr-background-hover: 0.3 !default;
