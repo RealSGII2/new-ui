@@ -1,5 +1,5 @@
 import NewCard from './NewCard'
-import NewCardActions from './parts/NewCardContent/NewCardActions'
+import NewCardActions from './parts/NewCardActions/NewCardActions'
 import NewCardContent from './parts/NewCardContent/NewCardContent'
 import NewCardContentSection from './parts/NewCardContentSection/NewCardContentSection'
 import NewCardHeader from './parts/NewCardHeader/NewCardHeader'
