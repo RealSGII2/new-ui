@@ -70,6 +70,6 @@
 }
 
 .new-ui.new-slider__slider:disabled::-moz-range-thumb {
-  background: $color-disabled
+  background: $color-disabled;
   transform: scale(0.5);
 }
