@@ -1,3 +1,6 @@
+/* Global Settings */
+$prefix: "ui"
+
 /* Colours */
 $color-default: #8C8C8C !default;
 $color-brand: #009BFF !default;
@@ -59,6 +62,13 @@ $type-keycode-color: #fff;
 $transition-base: 0.1s !default;
 $transition-slower: 0.3s !default;
 
+/* Breakpoints */
+$breakpoint-xsmall: "min-width: 10em" !default;
+$breakpoint-small: "min-width: 20em" !default;
+$breakpoint-medium: "min-width: 30em" !default;
+$breakpoint-large: "min-width: 40em" !default;
+$breakpoint-xlarge: "min-width: 50em" !default;
+
 /** ELEMENTS **/
 // Button
 $button-min-width: 88px !default;
@@ -68,6 +78,10 @@ $button-transparent-amount--hover: 0.9 !default;
 $button-transparent-amount--active: 0.7 !default;
 
 // Checkbox and Radio buttons
-$cr-background-color: #ccc;
+$cr-background-color: #ccc !default;
 $cr-background: 0.8 !default;
 $cr-background-hover: 0.3 !default;
+
+// Grids
+$grid-columns: 12 !default;
+$grid-max-width: 65em !default;

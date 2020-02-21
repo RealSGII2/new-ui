@@ -1,0 +1,42 @@
+@import '../_theme.scss';
+
+.#{$prefix}[class*='column-'] {
+  float: left;
+  padding: 1em;
+  width: 100%;
+  min-height: 1px;
+}
+
+.#{$prefix}.container {
+  width: 100%;
+  margin: 0 auto;
+
+  &.container--no-gutters {
+    .#{$prefix}[class*='column-'] {
+      float: left;
+      padding: 0em;
+      width: 100%;
+      min-height: 1px;
+    }
+  }
+}
+
+.#{$prefix}.container:after,
+.#{$prefix}.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media only screen and #{$breakpoint-medium} {
+  .#{$prefix}.container {
+    width: 95%;
+    max-width: $grid-max-width;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .#{$prefix}.column-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}

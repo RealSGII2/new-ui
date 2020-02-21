@@ -1,3 +1,5 @@
-.new-ui {
+@import '../_theme.scss';
+
+.#{$prefix} {
   outline: none;
 }
