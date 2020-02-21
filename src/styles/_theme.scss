@@ -22,8 +22,8 @@ $background-accent: #a4dfe5 !default;
 /* Borders */
 $border-radius-tile: 0px !default;
 $border-radius-base: 4px !default;
-$border-radius-rounded: 50px !default;
-$border-radius-oval: 100% !default;
+$border-radius-very-round: 8px !default;
+$border-radius-rounded: 100% !default;
 
 $border-width-base: 1px;
 $border-width-thick: 3px;
@@ -63,11 +63,11 @@ $transition-base: 0.1s !default;
 $transition-slower: 0.3s !default;
 
 /* Breakpoints */
-$breakpoint-xsmall: "min-width: 10em" !default;
-$breakpoint-small: "min-width: 20em" !default;
-$breakpoint-medium: "min-width: 30em" !default;
-$breakpoint-large: "min-width: 40em" !default;
-$breakpoint-xlarge: "min-width: 50em" !default;
+$breakpoint-xsmall: "max-width: 0px" !default;
+$breakpoint-small: "max-width: 600px" !default;
+$breakpoint-medium: "max-width: 960px" !default;
+$breakpoint-large: "max-width: 1264px" !default;
+$breakpoint-xlarge: "max-width: 1904px" !default;
 
 /** ELEMENTS **/
 // Button

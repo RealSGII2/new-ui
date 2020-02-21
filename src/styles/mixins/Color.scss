@@ -1,0 +1,7 @@
+$colors: $color-default, $color-brand, $color-secondary, $color-state-error, $color-state-success, $color-state-warn, $color-state-info, $color-disabled;
+
+@mixin color {
+  @each $color in $colors {
+    @content($color)
+  }
+}

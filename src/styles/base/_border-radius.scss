@@ -1,0 +1,17 @@
+@import '../_theme.scss';
+
+.ui.br-tile {
+  border-radius: $border-radius-tile;
+}
+
+.ui.br-base {
+  border-radius: $border-radius-base;
+}
+
+.ui.br-vround {
+  border-radius: $border-radius-very-round;
+}
+
+.ui.br-rounded {
+  border-radius: $border-radius-rounded;
+}

@@ -1,0 +1,33 @@
+@import '../_theme.scss';
+@import '../mixins/Color';
+@import '../functions/light';
+
+.ui.app-bar {
+  height: 56px;
+  padding: 16px;
+  color: #ffffff;
+
+  &.app-bar--dense {
+    height: 48px;
+  }
+
+  @include color using ($color) {
+    background-color: $color;
+
+    @if light($color) {
+      color: #000000;
+    }
+  }
+
+  .ui.app-bar__nav-btn {
+
+  }
+
+  .ui.app-bar__title {
+    margin-left: 32px;
+  }
+
+  .ui.app-bar__actions {
+    
+  }
+}
